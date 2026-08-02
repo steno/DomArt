@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -56,10 +56,32 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
   const bands = useLocalizedBands();
   const weeks = useProductionWeeks();
   const [imageFullscreen, setImageFullscreen] = useState(false);
+  const [tipOpen, setTipOpen] = useState(false);
+  const tipId = useId();
+  const tipRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     if (initialProductId) setProduct(initialProductId);
   }, [initialProductId, setProduct]);
+
+  useEffect(() => {
+    if (!tipOpen) return;
+
+    const onPointerDown = (e: PointerEvent) => {
+      if (tipRef.current?.contains(e.target as Node)) return;
+      setTipOpen(false);
+    };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setTipOpen(false);
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [tipOpen]);
 
   const product = products.find((p) => p.id === productId)!;
   const price = calculatePrice(toConfig());
@@ -95,17 +117,24 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
             <p className="text-[0.95rem] leading-snug text-neutral-700 lg:text-center">
               {colorway.description}
             </p>
-            <span className="group relative inline-flex shrink-0 pt-0.5 lg:pt-0">
+            <span ref={tipRef} className="relative inline-flex shrink-0 pt-0.5 lg:pt-0">
               <button
                 type="button"
-                className="text-neutral-600 transition-colors hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none"
+                aria-expanded={tipOpen}
+                aria-controls={tipId}
                 aria-label={t.moduleTip}
+                onClick={() => setTipOpen((open) => !open)}
+                className="-m-3 flex h-11 w-11 items-center justify-center text-neutral-600 transition-colors hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/20"
               >
                 <Info className="h-3.5 w-3.5" strokeWidth={1.75} />
               </button>
               <span
+                id={tipId}
                 role="tooltip"
-                className="pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 w-48 -translate-x-1/2 rounded bg-neutral-900 px-2.5 py-1.5 text-center text-[11px] leading-snug text-white opacity-0 shadow-sm transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
+                className={cn(
+                  "pointer-events-none absolute bottom-full left-1/2 z-30 mb-1 w-48 -translate-x-1/2 rounded bg-neutral-900 px-2.5 py-1.5 text-center text-[11px] leading-snug text-white shadow-sm transition-opacity duration-150",
+                  tipOpen ? "opacity-100" : "opacity-0"
+                )}
               >
                 {t.moduleTip}
               </span>

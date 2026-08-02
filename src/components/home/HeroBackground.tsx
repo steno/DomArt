@@ -51,12 +51,16 @@ export function HeroBackground({ alt }: HeroBackgroundProps) {
 
     let finishing = false;
     let fadeTimer = 0;
+    let retryTimer = 0;
+    let attempts = 0;
 
-    const start = () => {
-      void video.play().then(() => setVisible(true)).catch(() => {
-        setMounted(false);
-      });
-    };
+    // React's `muted` prop sets the JS property but often omits the HTML
+    // attribute — iOS Safari requires the attribute for muted autoplay.
+    video.defaultMuted = true;
+    video.muted = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
 
     const finish = () => {
       if (finishing) return;
@@ -64,6 +68,22 @@ export function HeroBackground({ alt }: HeroBackgroundProps) {
       video.pause();
       setVisible(false);
       fadeTimer = window.setTimeout(() => setMounted(false), FADE_MS);
+    };
+
+    const start = () => {
+      if (finishing) return;
+      attempts += 1;
+      // play() itself kicks off media fetch on iOS; don't wait for canplay.
+      void video
+        .play()
+        .then(() => setVisible(true))
+        .catch(() => {
+          if (attempts < 3) {
+            retryTimer = window.setTimeout(start, 350 * attempts);
+            return;
+          }
+          setMounted(false);
+        });
     };
 
     const onTimeUpdate = () => {
@@ -78,14 +98,13 @@ export function HeroBackground({ alt }: HeroBackgroundProps) {
 
     video.addEventListener("ended", finish);
     video.addEventListener("timeupdate", onTimeUpdate);
-    if (video.readyState >= 2) start();
-    else video.addEventListener("canplay", start, { once: true });
+    start();
 
     return () => {
       window.clearTimeout(fadeTimer);
+      window.clearTimeout(retryTimer);
       video.removeEventListener("ended", finish);
       video.removeEventListener("timeupdate", onTimeUpdate);
-      video.removeEventListener("canplay", start);
     };
   }, [mounted]);
 
@@ -116,13 +135,14 @@ export function HeroBackground({ alt }: HeroBackgroundProps) {
             className="absolute inset-0 h-full w-full object-cover object-center"
             muted
             playsInline
-            preload="metadata"
+            preload="auto"
             poster={withBasePath(heroVideo.poster)}
             aria-hidden
             tabIndex={-1}
           >
-            <source src={withBasePath(heroVideo.webm)} type="video/webm" />
+            {/* MP4 first: Safari/iOS has no WebM; listing it first avoids a failed probe. */}
             <source src={withBasePath(heroVideo.mp4)} type="video/mp4" />
+            <source src={withBasePath(heroVideo.webm)} type="video/webm" />
           </video>
         </div>
       ) : null}
