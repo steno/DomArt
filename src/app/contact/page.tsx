@@ -13,7 +13,7 @@ import {
 } from "@/lib/whatsapp";
 
 const field =
-  "mt-1.5 w-full border border-neutral-200 bg-white px-3 py-2.5 text-sm text-neutral-900 outline-none transition-colors focus:border-neutral-900";
+  "mt-1.5 w-full border border-neutral-200 bg-white px-3 py-2.5 text-base text-neutral-900 outline-none transition-colors focus:border-neutral-900 md:text-sm";
 
 type ContactTab = "trade" | "custom";
 

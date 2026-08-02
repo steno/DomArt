@@ -54,6 +54,25 @@ body {
   color: #1c1917;
 }
 
+/* Prevent iOS Safari zoom on form focus (font-size must be ≥16px) */
+@media (max-width: 767px) {
+  input:not(
+      [type="checkbox"],
+      [type="radio"],
+      [type="range"],
+      [type="button"],
+      [type="submit"],
+      [type="reset"],
+      [type="hidden"],
+      [type="image"],
+      [type="file"]
+    ),
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
 /* Focus visibility for a11y */
 :focus-visible {
   outline: 2px solid #1c1917;
