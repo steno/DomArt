@@ -69,7 +69,7 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
 
   return (
     <div className={cn("grid gap-10 lg:grid-cols-12 lg:gap-14", className)}>
-      <div className="sticky top-16 z-20 -mx-5 bg-[#FAF8F5] px-5 pb-3 lg:static lg:z-auto lg:col-span-7 lg:mx-0 lg:bg-transparent lg:px-0 lg:pb-0">
+      <div className="sticky top-16 z-20 self-start -mx-5 bg-[#FAF8F5] px-5 pb-3 md:top-[4.5rem] lg:col-span-7 lg:mx-0 lg:bg-[#FAF8F5] lg:px-0 lg:pb-0">
         <div className="relative aspect-[4/3] overflow-hidden bg-[#F3EEE6]">
           <SiteImage
             key={lifestyleSrc}
@@ -125,15 +125,25 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
             {product.name}
           </h1>
           <p className="mt-3 text-neutral-600 leading-relaxed">{product.tagline}</p>
-          <p className="mt-4 hidden font-display text-2xl text-neutral-900 lg:block">
+          <p className="mt-4 text-sm text-neutral-500 lg:hidden">
+            {t.includesInstallation} · {interpolate(t.craftsmanship, { weeks })}
+          </p>
+        </div>
+
+        <div className="relative hidden lg:sticky lg:top-[4.5rem] lg:z-20 lg:-mx-1 lg:-mt-4 lg:block lg:bg-[#FAF8F5] lg:px-1 lg:pt-3 lg:pb-6 lg:shadow-[0_-2rem_0_0_#FAF8F5]">
+          <p
+            className="font-display text-2xl text-neutral-900 tabular-nums"
+            aria-live="polite"
+          >
             {formatPrice(price, locale)}
           </p>
           <p className="mt-1 text-sm text-neutral-500">
             {t.includesInstallation} · {interpolate(t.craftsmanship, { weeks })}
           </p>
+          <Separator className="mt-6" />
         </div>
 
-        <Separator />
+        <Separator className="lg:hidden" />
 
         <fieldset>
           <legend className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-neutral-500">

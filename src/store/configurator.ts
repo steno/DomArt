@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type {
@@ -70,6 +71,38 @@ export const useConfiguratorStore = create<ConfiguratorState>()(
         };
       },
     }),
-    { name: "domart-config" }
+    {
+      name: "domart-config",
+      // Avoid SSR/client mismatch: localStorage must not apply before hydrate.
+      skipHydration: true,
+    }
   )
 );
+
+/** Rehydrate persisted config once on the client. Safe to call from multiple mounts. */
+export function useHydrateConfiguratorStore() {
+  useEffect(() => {
+    void useConfiguratorStore.persist?.rehydrate();
+  }, []);
+}
+
+/** True after localStorage rehydration finishes (always false on the server). */
+export function useConfiguratorHasHydrated() {
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    const api = useConfiguratorStore.persist;
+    // On SSR, persist is omitted when localStorage is unavailable.
+    if (!api) {
+      setHydrated(true);
+      return;
+    }
+    if (api.hasHydrated()) {
+      setHydrated(true);
+      return;
+    }
+    return api.onFinishHydration(() => setHydrated(true));
+  }, []);
+
+  return hydrated;
+}

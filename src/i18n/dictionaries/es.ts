@@ -37,7 +37,7 @@ export const es: Dictionary = {
     ordersVia: "Pedidos por WhatsApp",
   },
   home: {
-    heroAlt: "Pared Domart Costa en sala con integración de TV",
+    heroAlt: "Pared Domart terminada con persianas y TV en una sala moderna",
     series: "Serie Fachada",
     tagline: "Alegría dominicana, calma moderna.",
     exploreSeries: "Explorar la serie",

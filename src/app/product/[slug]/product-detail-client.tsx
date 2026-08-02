@@ -5,7 +5,10 @@ import { useSearchParams } from "next/navigation";
 import { Configurator } from "@/components/configurator/Configurator";
 import { SiteImage } from "@/components/ui/site-image";
 import { Separator } from "@/components/ui/separator";
-import { useConfiguratorStore } from "@/store/configurator";
+import {
+  useConfiguratorHasHydrated,
+  useConfiguratorStore,
+} from "@/store/configurator";
 import { type ProductType } from "@/lib/products";
 import { colorways, type ColorwayId } from "@/lib/colorways";
 import { colorwayImages } from "@/lib/images";
@@ -24,18 +27,20 @@ interface ProductDetailClientProps {
 export function ProductDetailClient({ productId }: ProductDetailClientProps) {
   const searchParams = useSearchParams();
   const { setColorway, loadConfig } = useConfiguratorStore();
+  const hasHydrated = useConfiguratorHasHydrated();
   const product = useLocalizedProduct(productId)!;
   const localizedColorways = useLocalizedColorways();
   const weeks = useProductionWeeks();
   const t = useDictionary().productDetail;
 
   useEffect(() => {
+    if (!hasHydrated) return;
     const color = searchParams.get("color") as ColorwayId | null;
     loadConfig({
       productId,
       colorwayId: color && colorways.some((c) => c.id === color) ? color : undefined,
     });
-  }, [productId, searchParams, loadConfig]);
+  }, [hasHydrated, productId, searchParams, loadConfig]);
 
   return (
     <div>

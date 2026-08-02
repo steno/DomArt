@@ -102,6 +102,14 @@ export function swatchForProduct(
   return colorSwatchImages[productId][colorwayId];
 }
 
+/** Home hero background — start still for LCP, end still to rest on after play */
+export const heroVideo = {
+  poster: "/videos/hero-timelapse-poster.webp",
+  endPoster: "/videos/hero-timelapse-end.webp",
+  mp4: "/videos/hero-timelapse.mp4",
+  webm: "/videos/hero-timelapse.webm",
+} as const;
+
 /** All lifestyle photography (used on home, inspiration, PDP) */
 export const lifestyleImages = {
   hero: "/images/lifestyle/living-costa-tv.webp",

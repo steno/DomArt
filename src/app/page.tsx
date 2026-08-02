@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { HeroBackground } from "@/components/home/HeroBackground";
 import { RoomStrip } from "@/components/home/RoomStrip";
-import { SiteImage } from "@/components/ui/site-image";
-import { lifestyleImages } from "@/lib/images";
 import { useDictionary } from "@/i18n/provider";
 
 export default function HomePage() {
@@ -13,15 +12,7 @@ export default function HomePage() {
   return (
     <>
       <section className="relative min-h-[88vh] overflow-hidden">
-        <SiteImage
-          src={lifestyleImages.hero}
-          alt={t.heroAlt}
-          fill
-          priority
-          sizes="100vw"
-          className="absolute inset-0"
-          imgClassName="object-cover object-center"
-        />
+        <HeroBackground alt={t.heroAlt} />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1c1917]/70 via-[#1c1917]/35 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1c1917]/50 via-transparent to-[#1c1917]/20" />
 

@@ -37,7 +37,7 @@ export const en: Dictionary = {
     ordersVia: "Orders via WhatsApp",
   },
   home: {
-    heroAlt: "Domart Costa living room accent wall with TV integration",
+    heroAlt: "Finished Domart facade wall with shutters and TV in a modern living room",
     series: "Fachada Series",
     tagline: "Dominican joy, modern calm.",
     exploreSeries: "Explore the Series",

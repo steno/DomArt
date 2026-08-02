@@ -1,12 +1,15 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { SiteImage } from "@/components/ui/site-image";
-import { useConfiguratorStore } from "@/store/configurator";
+import {
+  useConfiguratorHasHydrated,
+  useConfiguratorStore,
+} from "@/store/configurator";
 import { calculatePrice, getProduct } from "@/lib/products";
 import { lifestyleForProduct } from "@/lib/images";
 import { formatPrice } from "@/lib/utils";
@@ -26,12 +29,12 @@ import {
 
 export default function ReviewPage() {
   const router = useRouter();
-  const [mounted, setMounted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [name, setName] = useState("");
   const [notes, setNotes] = useState("");
   const { productId, colorwayId, tvRecess, lattice, baseBand, width, toConfig } =
     useConfiguratorStore();
+  const hasHydrated = useConfiguratorHasHydrated();
   const dict = useDictionary();
   const t = dict.review;
   const { locale } = useLocale();
@@ -40,8 +43,6 @@ export default function ReviewPage() {
   const widths = useLocalizedWidths(productId);
   const bands = useLocalizedBands();
   const weeks = useProductionWeeks();
-
-  useEffect(() => setMounted(true), []);
 
   const product =
     products.find((p) => p.id === productId) ??
@@ -78,7 +79,7 @@ export default function ReviewPage() {
     router.push(`/confirmation/?inquiry=${inquiryId}`);
   };
 
-  if (!mounted) {
+  if (!hasHydrated) {
     return (
       <div className="mx-auto max-w-4xl px-5 py-20 text-neutral-500">
         {t.loading}
