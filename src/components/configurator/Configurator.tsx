@@ -82,8 +82,8 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
         </div>
         <div className="mt-3 flex items-center justify-between gap-3 lg:mt-4 lg:justify-center">
           <div className="flex min-w-0 items-center gap-2 lg:justify-center">
-            <p className="truncate text-sm text-neutral-500">
-              {product.name} · {colorway.name}
+            <p className="text-sm text-neutral-500 lg:text-center">
+              {colorway.description}
             </p>
             <span className="group relative inline-flex shrink-0">
               <button
@@ -170,7 +170,6 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
             size="lg"
             showLabels
           />
-          <p className="mt-3 text-sm text-neutral-500">{colorway.description}</p>
         </fieldset>
 
         <fieldset>
