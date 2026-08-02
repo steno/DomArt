@@ -103,7 +103,7 @@ body {
   animation: fade-up 0.7s ease-out 0.3s both;
 }
 
-/* Mobile: cover-crop lifestyle shots, then slowly pan across the wall */
+/* Fullscreen zoom: cover the viewport, then slowly pan across the wall */
 @keyframes ken-burns-slide {
   from {
     transform: scale(1.18) translateX(5.5%);
@@ -116,7 +116,7 @@ body {
 @media (max-width: 767px) {
   .img-ken-burns {
     transform-origin: center center;
-    animation: ken-burns-slide 22s ease-in-out infinite alternate;
+    animation: ken-burns-slide 10s ease-in-out infinite alternate;
     will-change: transform;
   }
 }

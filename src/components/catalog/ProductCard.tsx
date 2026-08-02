@@ -45,7 +45,7 @@ export function ProductCard({
             fill
             className="absolute inset-0"
             sizes="(max-width: 768px) 100vw, 50vw"
-            imgClassName="object-cover img-ken-burns"
+            imgClassName="object-cover"
           />
         </Link>
         <p className="mt-2 text-center text-xs text-neutral-500">{caption}</p>

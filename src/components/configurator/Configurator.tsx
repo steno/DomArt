@@ -108,7 +108,7 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
             fill
             className="absolute inset-0"
             sizes="(max-width: 1024px) 100vw, 60vw"
-            imgClassName="object-cover img-ken-burns"
+            imgClassName="object-cover"
             priority
           />
         </button>

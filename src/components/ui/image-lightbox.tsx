@@ -69,7 +69,7 @@ export function ImageLightbox({
         fill
         className="absolute inset-0"
         sizes="100vw"
-        imgClassName="object-contain"
+        imgClassName="object-cover img-ken-burns"
       />
     </div>,
     document.body
