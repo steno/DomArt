@@ -260,6 +260,8 @@ export const es: Dictionary = {
     moduleTip:
       "Las proporciones del módulo pueden diferir ligeramente del original.",
     colorway: "Colorway",
+    expandImage: "Ver imagen a pantalla completa",
+    closeImage: "Cerrar imagen a pantalla completa",
   },
   productDetail: {
     technicalSpecs: "Especificaciones técnicas",

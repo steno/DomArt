@@ -198,6 +198,8 @@ export type Dictionary = {
     configSaved: string;
     moduleTip: string;
     colorway: string;
+    expandImage: string;
+    closeImage: string;
   };
   productDetail: {
     technicalSpecs: string;

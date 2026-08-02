@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -15,7 +16,7 @@ import {
 } from "@/lib/products";
 import { lifestyleForProduct } from "@/lib/images";
 import { formatPrice, cn } from "@/lib/utils";
-import { ArrowRight, Info } from "lucide-react";
+import { ArrowRight, Info, X } from "lucide-react";
 import { interpolate, useDictionary, useLocale } from "@/i18n/provider";
 import {
   useLocalizedBands,
@@ -54,10 +55,33 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
   const widths = useLocalizedWidths(productId);
   const bands = useLocalizedBands();
   const weeks = useProductionWeeks();
+  const [imageFullscreen, setImageFullscreen] = useState(false);
+  const [portalReady, setPortalReady] = useState(false);
 
   useEffect(() => {
     if (initialProductId) setProduct(initialProductId);
   }, [initialProductId, setProduct]);
+
+  useEffect(() => {
+    setPortalReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!imageFullscreen) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setImageFullscreen(false);
+    };
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [imageFullscreen]);
 
   const product = products.find((p) => p.id === productId)!;
   const price = calculatePrice(toConfig());
@@ -66,22 +90,28 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
     productId === "bathroom" ? t.vanityWidth : t.wallWidth;
 
   const lifestyleSrc = lifestyleForProduct(productId, colorwayId);
+  const lifestyleAlt = `${product.name} · ${colorway.name}`;
 
   return (
     <div className={cn("grid gap-10 lg:grid-cols-12 lg:gap-14", className)}>
       <div className="sticky top-16 z-20 self-start -mx-5 bg-[#FAF8F5] px-5 pb-3 md:top-[4.5rem] lg:col-span-7 lg:mx-0 lg:bg-[#FAF8F5] lg:px-0 lg:pb-0">
-        <div className="relative aspect-[4/3] overflow-hidden bg-[#F3EEE6]">
+        <button
+          type="button"
+          onClick={() => setImageFullscreen(true)}
+          aria-label={t.expandImage}
+          className="relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden bg-[#F3EEE6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/30"
+        >
           <SiteImage
             key={lifestyleSrc}
             src={lifestyleSrc}
-            alt={`${product.name} · ${colorway.name}`}
+            alt={lifestyleAlt}
             fill
             className="absolute inset-0"
             sizes="(max-width: 1024px) 100vw, 60vw"
             imgClassName="object-cover"
             priority
           />
-        </div>
+        </button>
         <div className="mt-3 flex items-center justify-between gap-3 lg:mt-4 lg:justify-center">
           <div className="flex min-w-0 items-start gap-2 lg:items-center lg:justify-center">
             <p className="text-[0.95rem] leading-snug text-neutral-700 lg:text-center">
@@ -130,7 +160,7 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
           </p>
         </div>
 
-        <div className="relative hidden lg:sticky lg:top-[4.5rem] lg:z-20 lg:-mx-1 lg:-mt-4 lg:block lg:bg-[#FAF8F5] lg:px-1 lg:pt-3 lg:pb-6 lg:shadow-[0_-2rem_0_0_#FAF8F5]">
+        <div className="relative hidden lg:sticky lg:top-[4.5rem] lg:z-20 lg:-mx-1 lg:block lg:bg-[#FAF8F5] lg:px-1 lg:pt-3 lg:pb-6 lg:shadow-[0_-2rem_0_0_#FAF8F5]">
           <p
             className="font-display text-2xl text-neutral-900 tabular-nums"
             aria-live="polite"
@@ -277,6 +307,36 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
           </p>
         </div>
       </div>
+
+      {portalReady &&
+        imageFullscreen &&
+        createPortal(
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={lifestyleAlt}
+            className="fixed inset-0 z-[100] cursor-zoom-out bg-black"
+            onClick={() => setImageFullscreen(false)}
+          >
+            <button
+              type="button"
+              onClick={() => setImageFullscreen(false)}
+              aria-label={t.closeImage}
+              className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 sm:right-5 sm:top-5"
+            >
+              <X className="h-5 w-5" strokeWidth={1.75} />
+            </button>
+            <SiteImage
+              src={lifestyleSrc}
+              alt={lifestyleAlt}
+              fill
+              className="absolute inset-0"
+              sizes="100vw"
+              imgClassName="object-contain"
+            />
+          </div>,
+          document.body
+        )}
     </div>
   );
 }

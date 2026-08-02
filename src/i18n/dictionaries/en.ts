@@ -257,6 +257,8 @@ export const en: Dictionary = {
     configSaved: "Your configuration is saved · Inquire via WhatsApp after review",
     moduleTip: "Module proportions may differ slightly from original.",
     colorway: "Colorway",
+    expandImage: "View image fullscreen",
+    closeImage: "Close fullscreen image",
   },
   productDetail: {
     technicalSpecs: "Technical specs",
