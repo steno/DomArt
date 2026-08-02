@@ -18,6 +18,8 @@ export const en: Dictionary = {
     language: "Language",
     en: "EN",
     es: "ES",
+    fr: "FR",
+    ru: "RU",
   },
   footer: {
     blurb:

@@ -18,6 +18,8 @@ export type Dictionary = {
     language: string;
     en: string;
     es: string;
+    fr: string;
+    ru: string;
   };
   footer: {
     blurb: string;

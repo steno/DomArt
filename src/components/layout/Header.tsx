@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useDictionary, useLocale } from "@/i18n/provider";
-import type { Locale } from "@/i18n/config";
+import { locales, localeLabels } from "@/i18n/config";
 
 export function Header() {
   const pathname = usePathname();
@@ -40,7 +40,7 @@ export function Header() {
       role="group"
       aria-label={t.nav.language}
     >
-      {(["en", "es"] as Locale[]).map((code) => (
+      {locales.map((code) => (
         <button
           key={code}
           type="button"
@@ -56,7 +56,7 @@ export function Header() {
           )}
           aria-pressed={locale === code}
         >
-          {code === "en" ? t.nav.en : t.nav.es}
+          {localeLabels[code]}
         </button>
       ))}
     </div>

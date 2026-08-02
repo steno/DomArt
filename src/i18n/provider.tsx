@@ -58,7 +58,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!ready) return;
-    document.documentElement.lang = locale === "es" ? "es" : "en";
+    document.documentElement.lang = locale;
   }, [locale, ready]);
 
   const value = useMemo(

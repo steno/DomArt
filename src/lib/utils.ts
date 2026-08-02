@@ -5,11 +5,18 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+const priceLocales: Record<string, string> = {
+  en: "en-US",
+  es: "es-DO",
+  fr: "fr-FR",
+  ru: "ru-RU",
+};
+
 export function formatPrice(
   cents: number,
-  locale: "en" | "es" = "en"
+  locale: string = "en"
 ): string {
-  return new Intl.NumberFormat(locale === "es" ? "es-DO" : "en-US", {
+  return new Intl.NumberFormat(priceLocales[locale] ?? "en-US", {
     style: "currency",
     currency: "USD",
     minimumFractionDigits: 0,
