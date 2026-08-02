@@ -113,7 +113,7 @@ export function ProductDetailClient({ productId }: ProductDetailClientProps) {
                 >
                   <SiteImage
                     src={colorwayImages[c.id]}
-                    alt={`${c.name} colorway`}
+                    alt={`${c.name} accent color`}
                     aspect="aspect-[5/3]"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />

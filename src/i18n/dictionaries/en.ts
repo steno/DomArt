@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const en: Dictionary = {
   meta: {
-    titleDefault: "Domart — Dominican Facade Back Boards",
+    titleDefault: "Domart — Dominican Accent Walls",
     description:
-      "Modular living-room, bedroom, and dining-room accent walls inspired by Dominican casas de madera. Caribbean joy in modern form. Crafted in 1–2 weeks.",
+      "Living room, bedroom, dining, and bathroom accent walls inspired by Dominican wooden houses. Caribbean color for calm modern rooms. Made in 1–2 weeks.",
   },
   nav: {
     shop: "Shop",
@@ -21,12 +21,12 @@ export const en: Dictionary = {
   },
   footer: {
     blurb:
-      "Dominican facade back boards for modern interiors. Modular pine panels, joyful Caribbean color, crafted in 1–2 weeks.",
+      "Dominican accent walls for modern interiors. Light pine panels, joyful Caribbean color, made in 1–2 weeks.",
     explore: "Explore",
     company: "Company",
     craftsmanship: "Craftsmanship",
     craftsmanshipBody:
-      "Light natural pine. One accent color. White trim. No complex carvings—only paint and standard lumber, made modular.",
+      "Light natural pine. One accent color. White trim. No complex carvings—only paint and standard lumber, built as sized panels.",
     shopSeries: "Shop the Series",
     inspiration: "Inspiration",
     howItsMade: "How It’s Made",
@@ -37,7 +37,7 @@ export const en: Dictionary = {
     ordersVia: "Orders via WhatsApp",
   },
   home: {
-    heroAlt: "Finished Domart facade wall with shutters and TV in a modern living room",
+    heroAlt: "Finished Domart accent wall with shutters and TV in a modern living room",
     series: "Fachada Series",
     tagline: "Dominican joy, modern calm.",
     exploreSeries: "Explore the Series",
@@ -45,11 +45,11 @@ export const en: Dictionary = {
     ourStory: "Our Story",
     storyHeadline: "Caribbean spirit, stripped to essentials",
     storyBody:
-      "Domart reinterprets the joyful vernacular of Dominican wooden houses—bohíos and Victorian-Caribbean hybrids from Puerto Plata, Samaná, and rural Cibao—as modular accent walls for sophisticated modern rooms. No complex carvings. Only paint, standard lumber, and light that moves across pine grain.",
+      "Domart brings the joy of Dominican wooden houses—from Puerto Plata, Samaná, and rural Cibao—indoors as accent walls for calm modern rooms. No complex carvings. Only paint, standard lumber, and light moving across pine grain.",
     readFullStory: "Read the full story",
-    ctaHeadline: "Configure your facade wall",
+    ctaHeadline: "Configure your accent wall",
     ctaBody:
-      "Choose type, colorway, and modular width. Live preview updates instantly. Crafted in 1–2 weeks. Inquire via WhatsApp.",
+      "Choose room type, accent color, and width. Live preview updates instantly. Made in 1–2 weeks. Inquire via WhatsApp.",
     startConfiguring: "Start configuring",
   },
   roomStrip: {
@@ -63,8 +63,8 @@ export const en: Dictionary = {
   },
   shop: {
     series: "Fachada Series",
-    title: "Shop",
-    body: "Four modular product types. Six accent colorways. Same structural language—only the color changes.",
+    title: "Accent walls for every room",
+    body: "Four room styles. Six accent colors. Same design—only the color changes.",
     filters: "Product filters",
     all: "All",
     livingRoom: "Living Room",
@@ -76,32 +76,32 @@ export const en: Dictionary = {
   about: {
     eyebrow: "About Domart",
     title: "Dominican joy, modern calm",
-    lead: "We translate the facade language of Caribbean wooden houses into modular back boards for contemporary living rooms, bedrooms, and dining spaces.",
-    sectionTitle: "From casas de madera to modern walls",
-    p1: "Across Puerto Plata, Samaná, and rural Cibao, Dominican casas de madera and bohíos carry a distinct joy—louvered shutters, painted frames, light wood left honest. Victorian-Caribbean hybrids add white trim and rhythmic panels without excess ornament.",
-    p2: "Domart strips that language to essentials: light natural pine, one accent paint color, and white for shutters and trim. No complex carvings. Only paint and standard lumber, organized into a modular system of 3–4 panel widths.",
-    p3: "The Fachada Series—also known as Casa Alegre Walls—uses the same structural models across living rooms (with optional TV recess), bedroom headboards, dining accents, and bathroom vanity backboards. Only the colorway changes.",
+    lead: "We bring the look of Caribbean wooden houses indoors—as accent walls for contemporary living rooms, bedrooms, and dining spaces.",
+    sectionTitle: "From Dominican wooden houses to modern walls",
+    p1: "Across Puerto Plata, Samaná, and rural Cibao, Dominican wooden houses carry a distinct joy—louvered shutters, painted frames, light wood left honest. Victorian-Caribbean hybrids add white trim and rhythmic panels without excess ornament.",
+    p2: "Domart strips that look to essentials: light natural pine, one accent paint color, and white for shutters and trim. No complex carvings. Only paint and standard lumber, built in three to four panel widths.",
+    p3: "The Fachada Series—also known as Casa Alegre Walls—uses the same design across living rooms (with optional TV recess), bedroom headboards, dining accents, and bathroom vanity walls. Only the accent color changes.",
     living: "Living",
     bedroom: "Bedroom",
     dining: "Dining",
     craftedTitle: "Crafted in 1–2 weeks",
     craftedBody:
-      "Modular chassis pieces are stocked; your accent color is finished to order. Configure yours, and we begin after payment clears.",
+      "Core pieces are stocked; your accent color is finished to order. Configure yours, and we begin after payment clears.",
     exploreSeries: "Explore the Series",
-    heroAlt: "Domart Costa living room facade wall",
+    heroAlt: "Domart Costa living room accent wall",
   },
   howItsMade: {
     process: "Process",
     title: "How it’s made",
-    lead: "Maximum three colors. Light natural pine—always. One accent paint. White for shutters and trim. No complex carvings—only paint and standard lumber in a modular system.",
+    lead: "Maximum three colors. Light natural pine—always. One accent paint. White for shutters and trim. No complex carvings—only paint and standard lumber, built as sized panels.",
     steps: [
       {
         title: "Configure",
-        body: "Choose product type, accent colorway, modular width, and optional features—TV recess, celosía lattice, zócalo base band.",
+        body: "Choose room type, accent color, width, and optional features—TV recess, lattice strip (celosía), or base band (zócalo).",
       },
       {
         title: "Cut list",
-        body: "We pull stocked modular blanks where we can, then generate a precise cut list for the rest: clapboard faces, shutter assemblies, frame rails, and optional bands.",
+        body: "We use stocked panel pieces where we can, then cut the rest to size: clapboard faces, shutter assemblies, frame rails, and optional bands.",
       },
       {
         title: "Mill & assemble",
@@ -109,34 +109,34 @@ export const en: Dictionary = {
       },
       {
         title: "Finish & ship",
-        body: "Panels are fitted as a modular system, packed for installation, and shipped within our 1–2 week craftsmanship window.",
+        body: "Panels are fitted together, packed for installation, and shipped within our 1–2 week window.",
       },
     ],
-    sixColorways: "Six Colorways",
+    sixColorways: "Six Accent Colors",
     colorwaysHeadline: "Natural wood. One accent. White.",
     colorwaysBody:
-      "Same structural models across every room—only the accent color changes.",
-    colorwayAlt: "{name} colorway facade panel",
-    stylesSheetAlt: "DIY living room wooden back boards — all six styles",
+      "Same design for every room—only the accent color changes.",
+    colorwayAlt: "{name} accent color panel",
+    stylesSheetAlt: "DIY living room wooden accent walls — all six styles",
     materialsTitle: "Materials & options",
     baseMaterial: "Base material",
     baseMaterialBody:
       "Light natural pine (or similar softwood) planks—unfinished or lightly oiled so the grain remains visible.",
     signature: "Signature elements",
     signatureBody:
-      "Faux louvered shutters (central window + flanking vertical panels), thin painted frame, optional low zócalo, optional thin white lattice/celosía strip.",
+      "Louvered shutters (central window + flanking vertical panels), thin painted frame, optional low base band (zócalo), optional thin white lattice strip (celosía).",
     diyKit: "DIY kit",
     diyKitBody:
-      "Prefer to finish yourself? Request a kit with cut list and finish guide—same modular dimensions, your hands on the final coat.",
+      "Prefer to finish yourself? Request a kit with cut list and finish guide—same panel sizes, your hands on the final coat.",
     timeline: "Timeline",
     timelineBody:
-      "Fully finished panels: typically 1–2 weeks from payment to ship-ready once modular blanks are in stock. Custom widths available via inquiry.",
+      "Fully finished panels: typically 1–2 weeks from payment to ship-ready when stocked pieces are available. Custom widths available via inquiry.",
     configureWall: "Configure a wall",
   },
   inspiration: {
     gallery: "Gallery",
-    title: "Inspiration",
-    lead: "Excerpts of Dominican facade culture—shutters, color, light wood—brought indoors as memory. The Fachada Series in living rooms, bedrooms, dining spaces, and pure feature panels.",
+    title: "Dominican color, indoors",
+    lead: "Shutters, color, and light wood from Dominican house fronts—brought inside. See the Fachada Series in living rooms, bedrooms, dining spaces, and as statement walls.",
     findYourRoom: "Find your room",
     expandImage: "View image fullscreen",
     closeImage: "Close fullscreen image",
@@ -145,38 +145,41 @@ export const en: Dictionary = {
     {
       id: "facade-costa-twin",
       title: "Costa twin windows",
-      caption: "White louvers on bright blue siding.",
+      caption: "White shutters on bright blue siding.",
     },
     {
       id: "facade-lime",
-      title: "Lime jalousie",
-      caption: "White louvers on a Caribbean green facade.",
+      title: "Lime shutters",
+      caption: "White shutters on a Caribbean green house front.",
     },
     {
       id: "facade-marigold",
       title: "Marigold shutters",
-      caption: "Blue frame, white louvers, sun-warmed siding.",
+      caption: "Blue frame, white shutters, sun-warmed siding.",
     },
     {
       id: "facade-lavender",
       title: "Lavender & yellow",
-      caption: "Weathered color blocking—shutters as architecture.",
+      caption: "Weathered color blocks—shutters as the main event.",
     },
     {
       id: "casa-alegre-mix",
       title: "Casa Alegre mix",
-      caption: "Playful Caribbean color blocking.",
+      caption: "Playful Caribbean color blocks.",
     },
     {
       id: "coral-living",
       title: "Coral living",
-      caption: "Weathered green flanks, coral frame.",
+      caption: "Weathered green sides, coral frame.",
     },
   ],
   contact: {
     eyebrow: "Contact",
     title: "Contact & trade",
-    lead: "Designers, builders, and homeowners—reach out for trade pricing, showroom samples, or custom modular widths.",
+    lead: "Designers, builders, and homeowners—reach out for trade pricing, showroom samples, or a custom width.",
+    formTabs: "Inquiry type",
+    tradeTab: "Trade",
+    customTab: "Custom width",
     tradeTitle: "Trade inquiry",
     tradeLead: "For interior designers, architects, and hospitality projects.",
     tradeThanks:
@@ -188,13 +191,13 @@ export const en: Dictionary = {
     sendInquiry: "Inquire via WhatsApp",
     customTitle: "Request custom width",
     customLead:
-      "Standard modules are 72″, 96″, 120″, and 144″. Tell us what you need.",
+      "Standard widths are 72″, 96″, 120″, and 144″. Tell us what you need.",
     customThanks:
       "WhatsApp opened with your custom-width request. Send the message and we’ll follow up with pricing and timeline.",
     productType: "Product type",
     desiredWidth: "Desired width",
     details: "Details",
-    detailsPlaceholder: "Colorway preference, room notes…",
+    detailsPlaceholder: "Color preference, room notes…",
     widthPlaceholder: 'e.g. 108"',
     requestCustom: "Request via WhatsApp",
     footerLine: "Orders & questions via WhatsApp:",
@@ -202,15 +205,15 @@ export const en: Dictionary = {
   review: {
     loading: "Loading your design…",
     eyebrow: "Your design",
-    title: "Review & inquire",
-    lead: "Confirm your Fachada Series configuration and estimate. We’ll reply on WhatsApp with availability, payment, and your {weeks} production window.",
+    title: "Review your wall",
+    lead: "Confirm your Fachada Series design and estimate. We’ll reply on WhatsApp with availability, payment, and your {weeks} production window.",
     product: "Product",
-    colorway: "Colorway",
+    colorway: "Accent color",
     width: "Width",
     options: "Options",
     tvRecess: "TV recess",
-    lattice: "Celosía lattice",
-    zocalo: "Zócalo",
+    lattice: "Lattice (celosía)",
+    zocalo: "Base band (zócalo)",
     estimate: "Estimate",
     includesInstallation: "Includes installation",
     editDesign: "Edit design",
@@ -239,41 +242,41 @@ export const en: Dictionary = {
   },
   notFound: {
     title: "Page not found",
-    body: "This wall doesn’t exist in our modular system.",
+    body: "This wall isn’t in our collection.",
     returnHome: "Return home",
   },
   configurator: {
     craftsmanship: "{weeks} craftsmanship",
     includesInstallation: "Includes installation",
-    productType: "Product Type",
+    productType: "Room Type",
     accentColor: "Accent Color",
     wallWidth: "Wall Width",
     vanityWidth: "Vanity Width",
     optionalFeatures: "Optional Features",
     tvRecess: "TV Recess",
     tvRecessHint: "Screens up to 75″ · +$140",
-    lattice: "Celosía Lattice Strip",
+    lattice: "Lattice Strip (celosía)",
     latticeHint: "Thin white lattice · +$90",
-    zocalo: "Zócalo Base Band",
+    zocalo: "Base Band (zócalo)",
     reviewDesign: "Review design",
-    configSaved: "Your configuration is saved · Inquire via WhatsApp after review",
-    moduleTip: "Module proportions may differ slightly from original.",
-    colorway: "Colorway",
+    configSaved: "Your design is saved · Inquire via WhatsApp after review",
+    moduleTip: "Panel proportions may differ slightly from the original.",
+    colorway: "Accent color",
     expandImage: "View image fullscreen",
     closeImage: "Close fullscreen image",
   },
   productDetail: {
-    technicalSpecs: "Technical specs",
+    technicalSpecs: "Specs",
     materials: "Materials",
     finish: "Finish",
-    modularWidths: "Modular widths",
+    modularWidths: "Available widths",
     depth: "Depth",
     diyVsFinished: "DIY vs finished",
     production: "Production",
-    cutListTitle: "Cut-list transparency",
+    cutListTitle: "What’s in a panel",
     cutListLead:
       "Every panel is built from standard lumber. No proprietary carvings—paint and proportion do the work.",
-    relatedColorways: "Related colorways",
+    relatedColorways: "More accent colors",
     customWidth: "Need a custom width?",
     requestInquiry: "Request an inquiry",
   },
@@ -295,10 +298,10 @@ export const en: Dictionary = {
       shortName: "Living Room",
       tagline: "A joyful focal wall with optional TV integration.",
       description:
-        "Modular facade panels that frame your living room with Dominican vernacular rhythm—louvered shutters, light pine, and a single accent color. Designed for calm modern interiors with optional TV recess.",
+        "Pine panels that frame your living room with Dominican shutter rhythm—light wood and a single accent color. Designed for calm modern interiors, with an optional recess for your TV.",
       features: [
         'Optional TV recess for screens up to 75"',
-        "Central faux louvered shutters",
+        "Central louvered shutters",
         "Flanking vertical shutter panels",
         "Thin painted frame in accent color",
       ],
@@ -325,7 +328,7 @@ export const en: Dictionary = {
       shortName: "Bedroom",
       tagline: "A serene headboard wall that softens the room.",
       description:
-        "The Fachada Series scaled for the bedroom—centered shutters above the bed, flanking panels, and the same three-color Dominican language. Calm enough for rest, distinctive enough to feel like home.",
+        "The Fachada Series scaled for the bedroom—centered shutters above the bed, flanking panels, and the same three-color Dominican palette. Calm enough for rest, distinctive enough to feel like home.",
       features: [
         "Proportioned for queen & king beds",
         "Central shutter window motif",
@@ -354,11 +357,11 @@ export const en: Dictionary = {
       shortName: "Dining Room",
       tagline: "Caribbean spirit behind the table.",
       description:
-        "Bring the casa de madera facade into the dining room—modular pine panels, painted shutters, and white trim that glow under evening light. Same structure as the series; only the colorway changes.",
+        "Bring a Dominican house-front look into the dining room—pine panels, painted shutters, and white trim that glow under evening light. Same design as the series; only the accent color changes.",
       features: [
         "Centered composition behind dining table",
         "Signature louvered shutters",
-        "Optional zócalo for grounded presence",
+        "Optional base band for grounded presence",
         "Works with existing wainscoting",
       ],
       specs: {
@@ -381,14 +384,14 @@ export const en: Dictionary = {
     bathroom: {
       name: "Bathroom Vanity Backboard",
       shortName: "Bathroom",
-      tagline: "A medicine-cabinet facade above the sink.",
+      tagline: "A shuttered accent behind the vanity.",
       description:
-        "The Fachada Series scaled for the bath—modular pine panels behind the vanity, with the signature shutter window reading as a medicine-cabinet optic. Accent color on shutters and zócalo; light wood and white trim throughout.",
+        "The Fachada Series scaled for the bath—pine panels behind the vanity, with the signature shutter window echoing a medicine cabinet. Accent color on shutters and base band; light wood and white trim throughout.",
       features: [
         "Centered medicine-cabinet shutter motif",
         "Proportioned for vanity widths",
         "Moisture-minded finishes available",
-        "Full shutter, frame & zócalo language",
+        "Full shutter, frame & base-band look",
       ],
       specs: {
         materials: "Light natural pine planks, unfinished or lightly oiled",
@@ -437,7 +440,7 @@ export const en: Dictionary = {
   whatsapp: {
     greeting: "Hello Domart — I'd like to inquire about this configuration.",
     tradeGreeting: "Hello Domart — I'd like to make a trade inquiry.",
-    customGreeting: "Hello Domart — I'd like to request a custom modular width.",
+    customGreeting: "Hello Domart — I'd like to request a custom width.",
     inquiry: "Inquiry",
     name: "Name",
     company: "Company",

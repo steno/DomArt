@@ -1,4 +1,4 @@
-# Domart — Dominican Facade Back Boards
+# Domart — Dominican Accent Walls
 
 Premium static showroom & e-commerce experience for the **Fachada Series / Casa Alegre Walls**.
 
@@ -12,7 +12,7 @@ Built with **Next.js (App Router) + TypeScript**, configured for **`output: 'exp
 - Cart with configuration persistence (`localStorage`)
 - **WhatsApp ordering** — checkout opens a pre-filled message to +1 754-213-3764
 - About, How It’s Made, Inspiration, Contact / Trade / Custom width
-- Six colorways: Costa, Sol, Jungla, Coral, Soft Pink, Navy
+- Six accent colors: Costa, Sol, Jungla, Coral, Soft Pink, Navy
 
 ## Tech stack
 

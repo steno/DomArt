@@ -33,15 +33,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Domart — Dominican Facade Back Boards",
+    default: "Domart — Dominican Accent Walls",
     template: "%s · Domart",
   },
   description:
-    "Modular living-room, bedroom, and dining-room accent walls inspired by Dominican casas de madera. Caribbean joy in modern form. Crafted in 1–2 weeks.",
+    "Living room, bedroom, dining, and bathroom accent walls inspired by Dominican wooden houses. Caribbean color for calm modern rooms. Made in 1–2 weeks.",
   openGraph: {
-    title: "Domart — Dominican Facade Back Boards",
+    title: "Domart — Dominican Accent Walls",
     description:
-      "Fachada Series / Casa Alegre Walls. Modular pine panels with joyful Caribbean colorways for modern interiors.",
+      "Fachada Series accent walls in light pine with joyful Caribbean colors for modern interiors.",
     type: "website",
     locale: "en_US",
     siteName: "Domart",
@@ -50,16 +50,16 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Domart facade accent wall in a modern living room",
+        alt: "Domart accent wall in a modern living room",
         type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Domart — Dominican Facade Back Boards",
+    title: "Domart — Dominican Accent Walls",
     description:
-      "Modular accent walls inspired by Dominican vernacular architecture.",
+      "Accent walls inspired by Dominican wooden houses—Caribbean color for modern rooms.",
     images: [OG_IMAGE],
   },
   icons: {

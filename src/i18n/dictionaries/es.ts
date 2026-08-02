@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const es: Dictionary = {
   meta: {
-    titleDefault: "Domart — Paneles de fachada dominicanos",
+    titleDefault: "Domart — Paredes de acento dominicanas",
     description:
-      "Paredes modulares para sala, dormitorio y comedor inspiradas en las casas de madera dominicanas. Alegría caribeña en forma moderna. Elaboradas en 1–2 semanas.",
+      "Paredes de acento para sala, dormitorio, comedor y baño inspiradas en las casas de madera dominicanas. Color caribeño para interiores calmados. Elaboradas en 1–2 semanas.",
   },
   nav: {
     shop: "Tienda",
@@ -21,23 +21,23 @@ export const es: Dictionary = {
   },
   footer: {
     blurb:
-      "Paneles de fachada dominicanos para interiores modernos. Madera de pino modular, color caribeño, elaborados en 1–2 semanas.",
+      "Paredes de acento dominicanas para interiores modernos. Paneles de pino claro, color caribeño, elaboradas en 1–2 semanas.",
     explore: "Explorar",
     company: "Empresa",
     craftsmanship: "Oficio",
     craftsmanshipBody:
-      "Pino natural claro. Un color de acento. Molduras blancas. Sin tallados complejos—solo pintura y madera estándar, hecha modular.",
+      "Pino natural claro. Un color de acento. Molduras blancas. Sin tallados complejos—solo pintura y madera estándar, en paneles a medida.",
     shopSeries: "Comprar la serie",
     inspiration: "Inspiración",
     howItsMade: "Cómo se hace",
     about: "Sobre Domart",
-    contactTrade: "Contacto y trade",
+    contactTrade: "Contacto y profesionales",
     customWidth: "Ancho a medida",
     rights: "Todos los derechos reservados.",
     ordersVia: "Pedidos por WhatsApp",
   },
   home: {
-    heroAlt: "Pared Domart terminada con persianas y TV en una sala moderna",
+    heroAlt: "Pared de acento Domart terminada con persianas y TV en una sala moderna",
     series: "Serie Fachada",
     tagline: "Alegría dominicana, calma moderna.",
     exploreSeries: "Explorar la serie",
@@ -45,11 +45,11 @@ export const es: Dictionary = {
     ourStory: "Nuestra historia",
     storyHeadline: "Espíritu caribeño, reducido a lo esencial",
     storyBody:
-      "Domart reinterpreta la alegría vernácula de las casas de madera dominicanas—bohíos e híbridos victorianos-caribeños de Puerto Plata, Samaná y el Cibao rural—como paredes de acento modulares para interiores contemporáneos. Sin tallados complejos. Solo pintura, madera estándar y luz que recorre la veta del pino.",
+      "Domart lleva la alegría de las casas de madera dominicanas—de Puerto Plata, Samaná y el Cibao rural—adentro, como paredes de acento para habitaciones modernas y calmadas. Sin tallados complejos. Solo pintura, madera estándar y luz que recorre la veta del pino.",
     readFullStory: "Leer la historia completa",
-    ctaHeadline: "Configura tu pared de fachada",
+    ctaHeadline: "Configura tu pared de acento",
     ctaBody:
-      "Elige tipo, colorway y ancho modular. La vista previa se actualiza al instante. Elaborada en 1–2 semanas. Consulta por WhatsApp.",
+      "Elige tipo de habitación, color de acento y ancho. La vista previa se actualiza al instante. Elaborada en 1–2 semanas. Consulta por WhatsApp.",
     startConfiguring: "Empezar a configurar",
   },
   roomStrip: {
@@ -63,8 +63,8 @@ export const es: Dictionary = {
   },
   shop: {
     series: "Serie Fachada",
-    title: "Tienda",
-    body: "Cuatro tipos de producto modulares. Seis colorways de acento. El mismo lenguaje estructural—solo cambia el color.",
+    title: "Paredes de acento para cada habitación",
+    body: "Cuatro estilos de habitación. Seis colores de acento. El mismo diseño—solo cambia el color.",
     filters: "Filtros de producto",
     all: "Todos",
     livingRoom: "Sala",
@@ -76,32 +76,32 @@ export const es: Dictionary = {
   about: {
     eyebrow: "Sobre Domart",
     title: "Alegría dominicana, calma moderna",
-    lead: "Traducimos el lenguaje de fachada de las casas de madera caribeñas en paneles modulares para salas, dormitorios y comedores contemporáneos.",
-    sectionTitle: "De las casas de madera a paredes modernas",
-    p1: "En Puerto Plata, Samaná y el Cibao rural, las casas de madera y bohíos dominicanos cargan una alegría propia—persianas de lamas, marcos pintados, madera clara sin disfraz. Los híbridos victorianos-caribeños suman molduras blancas y paneles rítmicos sin exceso de ornamento.",
-    p2: "Domart reduce ese lenguaje a lo esencial: pino natural claro, un solo color de acento, y blanco en persianas y molduras. Sin tallados complejos. Solo pintura y madera estándar, organizada en un sistema modular de 3–4 anchos de panel.",
-    p3: "La Serie Fachada—también conocida como Casa Alegre Walls—usa los mismos modelos estructurales en salas (con nicho opcional para TV), cabeceros, acentos de comedor y respaldos de tocador. Solo cambia el colorway.",
+    lead: "Llevamos el look de las casas de madera caribeñas adentro—como paredes de acento para salas, dormitorios y comedores contemporáneos.",
+    sectionTitle: "De las casas de madera dominicanas a paredes modernas",
+    p1: "En Puerto Plata, Samaná y el Cibao rural, las casas de madera dominicanas cargan una alegría propia—persianas de lamas, marcos pintados, madera clara sin disfraz. Los híbridos victorianos-caribeños suman molduras blancas y paneles rítmicos sin exceso de ornamento.",
+    p2: "Domart reduce ese look a lo esencial: pino natural claro, un solo color de acento, y blanco en persianas y molduras. Sin tallados complejos. Solo pintura y madera estándar, en tres o cuatro anchos de panel.",
+    p3: "La Serie Fachada—también conocida como Casa Alegre Walls—usa el mismo diseño en salas (con nicho opcional para TV), cabeceros, acentos de comedor y paredes de tocador. Solo cambia el color de acento.",
     living: "Sala",
     bedroom: "Dormitorio",
     dining: "Comedor",
     craftedTitle: "Elaboradas en 1–2 semanas",
     craftedBody:
-      "Las piezas del chasis modular se mantienen en stock; tu color de acento se acaba a pedido. Configúrala y empezamos cuando se confirme el pago.",
+      "Las piezas principales se mantienen en stock; tu color de acento se acaba a pedido. Configúrala y empezamos cuando se confirme el pago.",
     exploreSeries: "Explorar la serie",
-    heroAlt: "Pared de fachada Domart Costa en sala",
+    heroAlt: "Pared de acento Domart Costa en sala",
   },
   howItsMade: {
     process: "Proceso",
     title: "Cómo se hace",
-    lead: "Máximo tres colores. Pino natural claro—siempre. Una pintura de acento. Blanco en persianas y molduras. Sin tallados complejos—solo pintura y madera estándar en un sistema modular.",
+    lead: "Máximo tres colores. Pino natural claro—siempre. Una pintura de acento. Blanco en persianas y molduras. Sin tallados complejos—solo pintura y madera estándar, en paneles a medida.",
     steps: [
       {
         title: "Configurar",
-        body: "Elige tipo de producto, colorway de acento, ancho modular y opcionales—nicho para TV, celosía, zócalo.",
+        body: "Elige tipo de habitación, color de acento, ancho y opcionales—nicho para TV, franja de celosía o zócalo.",
       },
       {
         title: "Lista de corte",
-        body: "Tomamos blanks modulares en stock cuando podemos, y generamos una lista de corte precisa para el resto: tablas de fachada, ensambles de persianas, rieles de marco y bandas opcionales.",
+        body: "Usamos piezas en stock cuando podemos, y cortamos el resto a medida: tablas de fachada, ensambles de persianas, rieles de marco y bandas opcionales.",
       },
       {
         title: "Fresar y armar",
@@ -109,15 +109,15 @@ export const es: Dictionary = {
       },
       {
         title: "Acabar y enviar",
-        body: "Los paneles se ajustan como sistema modular, se empacan para instalación y se envían dentro de nuestra ventana de oficio de 1–2 semanas.",
+        body: "Los paneles se ajustan, se empacan para instalación y se envían dentro de nuestra ventana de 1–2 semanas.",
       },
     ],
-    sixColorways: "Seis colorways",
+    sixColorways: "Seis colores de acento",
     colorwaysHeadline: "Madera natural. Un acento. Blanco.",
     colorwaysBody:
-      "Los mismos modelos estructurales en cada habitación—solo cambia el color de acento.",
-    colorwayAlt: "Panel de fachada colorway {name}",
-    stylesSheetAlt: "Paneles de madera DIY para sala — los seis estilos",
+      "El mismo diseño en cada habitación—solo cambia el color de acento.",
+    colorwayAlt: "Panel en color de acento {name}",
+    stylesSheetAlt: "Paredes de acento DIY para sala — los seis estilos",
     materialsTitle: "Materiales y opciones",
     baseMaterial: "Material base",
     baseMaterialBody:
@@ -127,16 +127,16 @@ export const es: Dictionary = {
       "Persianas de lamas (ventana central + paneles verticales laterales), marco pintado delgado, zócalo bajo opcional, franja delgada de celosía blanca opcional.",
     diyKit: "Kit DIY",
     diyKitBody:
-      "¿Prefieres acabar tú mismo? Solicita un kit con lista de corte y guía de acabado—mismas dimensiones modulares, tu mano en la capa final.",
+      "¿Prefieres acabar tú mismo? Solicita un kit con lista de corte y guía de acabado—mismos tamaños de panel, tu mano en la capa final.",
     timeline: "Plazos",
     timelineBody:
-      "Paneles totalmente acabados: normalmente 1–2 semanas desde el pago hasta listo para envío cuando hay blanks modulares en stock. Anchos a medida disponibles por consulta.",
+      "Paneles totalmente acabados: normalmente 1–2 semanas desde el pago hasta listo para envío cuando hay piezas en stock. Anchos a medida disponibles por consulta.",
     configureWall: "Configurar una pared",
   },
   inspiration: {
     gallery: "Galería",
-    title: "Inspiración",
-    lead: "Fragmentos de la cultura de fachadas dominicanas—persianas, color, madera clara—llevados adentro como memoria. La Serie Fachada en salas, dormitorios, comedores y paneles de acento.",
+    title: "Color dominicano, adentro",
+    lead: "Persianas, color y madera clara de las fachadas dominicanas—llevados adentro. Mira la Serie Fachada en salas, dormitorios, comedores y como paredes protagonistas.",
     findYourRoom: "Encuentra tu espacio",
     expandImage: "Ver imagen a pantalla completa",
     closeImage: "Cerrar imagen a pantalla completa",
@@ -145,22 +145,22 @@ export const es: Dictionary = {
     {
       id: "facade-costa-twin",
       title: "Ventanas gemelas Costa",
-      caption: "Louvers blancas sobre siding azul brillante.",
+      caption: "Persianas blancas sobre siding azul brillante.",
     },
     {
       id: "facade-lime",
-      title: "Persiana lima",
-      caption: "Louvers blancas sobre una fachada verde caribeña.",
+      title: "Persianas lima",
+      caption: "Persianas blancas sobre una fachada verde caribeña.",
     },
     {
       id: "facade-marigold",
       title: "Persianas marigold",
-      caption: "Marco azul, louvers blancas, siding al sol.",
+      caption: "Marco azul, persianas blancas, siding al sol.",
     },
     {
       id: "facade-lavender",
       title: "Lavanda y amarillo",
-      caption: "Bloques de color desgastados—persianas como arquitectura.",
+      caption: "Bloques de color desgastados—las persianas como protagonistas.",
     },
     {
       id: "casa-alegre-mix",
@@ -175,9 +175,12 @@ export const es: Dictionary = {
   ],
   contact: {
     eyebrow: "Contacto",
-    title: "Contacto y trade",
-    lead: "Diseñadores, constructores y dueños de casa—escríbenos por precios trade, muestras de showroom o anchos modulares a medida.",
-    tradeTitle: "Consulta trade",
+    title: "Contacto y profesionales",
+    lead: "Diseñadores, constructores y dueños de casa—escríbenos por precios para profesionales, muestras o un ancho a medida.",
+    formTabs: "Tipo de consulta",
+    tradeTab: "Profesionales",
+    customTab: "Ancho a medida",
+    tradeTitle: "Consulta para profesionales",
     tradeLead:
       "Para diseñadores de interiores, arquitectos y proyectos de hospitalidad.",
     tradeThanks:
@@ -189,13 +192,13 @@ export const es: Dictionary = {
     sendInquiry: "Consultar por WhatsApp",
     customTitle: "Solicitar ancho a medida",
     customLead:
-      "Los módulos estándar miden 72″, 96″, 120″ y 144″. Cuéntanos qué necesitas.",
+      "Los anchos estándar miden 72″, 96″, 120″ y 144″. Cuéntanos qué necesitas.",
     customThanks:
       "WhatsApp se abrió con tu solicitud de ancho a medida. Envía el mensaje y te enviaremos precio y plazos.",
     productType: "Tipo de producto",
     desiredWidth: "Ancho deseado",
     details: "Detalles",
-    detailsPlaceholder: "Preferencia de colorway, notas del espacio…",
+    detailsPlaceholder: "Preferencia de color, notas del espacio…",
     widthPlaceholder: 'ej. 108"',
     requestCustom: "Solicitar por WhatsApp",
     footerLine: "Pedidos y preguntas por WhatsApp:",
@@ -203,10 +206,10 @@ export const es: Dictionary = {
   review: {
     loading: "Cargando tu diseño…",
     eyebrow: "Tu diseño",
-    title: "Revisar y consultar",
-    lead: "Confirma tu configuración de la Serie Fachada y el estimado. Te responderemos por WhatsApp con disponibilidad, pago y tu ventana de producción de {weeks}.",
+    title: "Revisa tu pared",
+    lead: "Confirma tu diseño de la Serie Fachada y el estimado. Te responderemos por WhatsApp con disponibilidad, pago y tu ventana de producción de {weeks}.",
     product: "Producto",
-    colorway: "Colorway",
+    colorway: "Color de acento",
     width: "Ancho",
     options: "Opciones",
     tvRecess: "Nicho TV",
@@ -240,13 +243,13 @@ export const es: Dictionary = {
   },
   notFound: {
     title: "Página no encontrada",
-    body: "Esta pared no existe en nuestro sistema modular.",
+    body: "Esta pared no está en nuestra colección.",
     returnHome: "Volver al inicio",
   },
   configurator: {
     craftsmanship: "Oficio de {weeks}",
     includesInstallation: "Incluye instalación",
-    productType: "Tipo de producto",
+    productType: "Tipo de habitación",
     accentColor: "Color de acento",
     wallWidth: "Ancho de pared",
     vanityWidth: "Ancho de tocador",
@@ -258,25 +261,25 @@ export const es: Dictionary = {
     zocalo: "Zócalo",
     reviewDesign: "Revisar diseño",
     configSaved:
-      "Tu configuración está guardada · Consulta por WhatsApp después de revisar",
+      "Tu diseño está guardado · Consulta por WhatsApp después de revisar",
     moduleTip:
-      "Las proporciones del módulo pueden diferir ligeramente del original.",
-    colorway: "Colorway",
+      "Las proporciones del panel pueden diferir ligeramente del original.",
+    colorway: "Color de acento",
     expandImage: "Ver imagen a pantalla completa",
     closeImage: "Cerrar imagen a pantalla completa",
   },
   productDetail: {
-    technicalSpecs: "Especificaciones técnicas",
+    technicalSpecs: "Especificaciones",
     materials: "Materiales",
     finish: "Acabado",
-    modularWidths: "Anchos modulares",
+    modularWidths: "Anchos disponibles",
     depth: "Profundidad",
     diyVsFinished: "DIY vs acabado",
     production: "Producción",
-    cutListTitle: "Transparencia de lista de corte",
+    cutListTitle: "Qué incluye un panel",
     cutListLead:
       "Cada panel se construye con madera estándar. Sin tallados propietarios—la pintura y la proporción hacen el trabajo.",
-    relatedColorways: "Colorways relacionados",
+    relatedColorways: "Más colores de acento",
     customWidth: "¿Necesitas un ancho a medida?",
     requestInquiry: "Solicitar consulta",
   },
@@ -298,7 +301,7 @@ export const es: Dictionary = {
       shortName: "Sala",
       tagline: "Una pared focal alegre con integración opcional de TV.",
       description:
-        "Paneles de fachada modulares que enmarcan tu sala con el ritmo vernáculo dominicano—persianas de lamas, pino claro y un solo color de acento. Diseñados para interiores modernos calmados, con nicho opcional para TV.",
+        "Paneles de pino que enmarcan tu sala con el ritmo de persianas dominicanas—madera clara y un solo color de acento. Diseñados para interiores modernos calmados, con nicho opcional para TV.",
       features: [
         'Nicho opcional para TV hasta 75"',
         "Persianas centrales de lamas",
@@ -330,7 +333,7 @@ export const es: Dictionary = {
       shortName: "Dormitorio",
       tagline: "Un cabecero sereno que suaviza la habitación.",
       description:
-        "La Serie Fachada a escala de dormitorio—persianas centradas sobre la cama, paneles laterales y el mismo lenguaje dominicano de tres colores. Lo bastante calmado para descansar, lo bastante distintivo para sentirse en casa.",
+        "La Serie Fachada a escala de dormitorio—persianas centradas sobre la cama, paneles laterales y la misma paleta dominicana de tres colores. Lo bastante calmado para descansar, lo bastante distintivo para sentirse en casa.",
       features: [
         "Proporcionado para camas queen y king",
         "Motivo central de ventana con persianas",
@@ -361,7 +364,7 @@ export const es: Dictionary = {
       shortName: "Comedor",
       tagline: "Espíritu caribeño detrás de la mesa.",
       description:
-        "Lleva la fachada de casa de madera al comedor—paneles de pino modulares, persianas pintadas y molduras blancas que brillan con la luz de la tarde. Misma estructura de la serie; solo cambia el colorway.",
+        "Lleva el look de una fachada dominicana al comedor—paneles de pino, persianas pintadas y molduras blancas que brillan con la luz de la tarde. El mismo diseño de la serie; solo cambia el color de acento.",
       features: [
         "Composición centrada detrás de la mesa",
         "Persianas de lamas características",
@@ -390,14 +393,14 @@ export const es: Dictionary = {
     bathroom: {
       name: "Respaldo de tocador",
       shortName: "Baño",
-      tagline: "Una fachada tipo botiquín sobre el lavabo.",
+      tagline: "Un acento de persianas detrás del tocador.",
       description:
-        "La Serie Fachada a escala de baño—paneles de pino modulares detrás del tocador, con la ventana de persianas leyéndose como botiquín. Color de acento en persianas y zócalo; madera clara y molduras blancas en todo.",
+        "La Serie Fachada a escala de baño—paneles de pino detrás del tocador, con la ventana de persianas evocando un botiquín. Color de acento en persianas y zócalo; madera clara y molduras blancas en todo.",
       features: [
         "Motivo central de persianas tipo botiquín",
         "Proporcionado a anchos de tocador",
         "Acabados aptos para humedad disponibles",
-        "Lenguaje completo de persianas, marco y zócalo",
+        "Look completo de persianas, marco y zócalo",
       ],
       specs: {
         materials:
@@ -448,9 +451,9 @@ export const es: Dictionary = {
   whatsapp: {
     greeting:
       "Hola Domart — me gustaría consultar sobre esta configuración.",
-    tradeGreeting: "Hola Domart — me gustaría hacer una consulta trade.",
+    tradeGreeting: "Hola Domart — me gustaría hacer una consulta para profesionales.",
     customGreeting:
-      "Hola Domart — me gustaría solicitar un ancho modular a medida.",
+      "Hola Domart — me gustaría solicitar un ancho a medida.",
     inquiry: "Consulta",
     name: "Nombre",
     company: "Empresa",

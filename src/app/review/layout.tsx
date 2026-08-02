@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Review Your Design",
+  title: "Review Your Wall",
   description:
-    "Review your Domart Fachada Series configuration and estimate, then inquire via WhatsApp.",
+    "Review your Domart Fachada Series design and estimate, then inquire via WhatsApp.",
 };
 
 export default function ReviewLayout({

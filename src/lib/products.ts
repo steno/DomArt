@@ -79,11 +79,11 @@ export const products: Product[] = [
     shortName: "Living Room",
     tagline: "A joyful focal wall with optional TV integration.",
     description:
-      "Modular facade panels that frame your living room with Dominican vernacular rhythm—louvered shutters, light pine, and a single accent color. Designed for calm modern interiors with optional TV recess.",
+      "Pine panels that frame your living room with Dominican shutter rhythm—light wood and a single accent color. Designed for calm modern interiors, with an optional recess for your TV.",
     basePriceCents: 168000,
     features: [
       "Optional TV recess for screens up to 75\"",
-      "Central faux louvered shutters",
+      "Central louvered shutters",
       "Flanking vertical shutter panels",
       "Thin painted frame in accent color",
     ],
@@ -117,7 +117,7 @@ export const products: Product[] = [
     shortName: "Bedroom",
     tagline: "A serene headboard wall that softens the room.",
     description:
-      "The Fachada Series scaled for the bedroom—centered shutters above the bed, flanking panels, and the same three-color Dominican language. Calm enough for rest, distinctive enough to feel like home.",
+      "The Fachada Series scaled for the bedroom—centered shutters above the bed, flanking panels, and the same three-color Dominican palette. Calm enough for rest, distinctive enough to feel like home.",
     basePriceCents: 138000,
     features: [
       "Proportioned for queen & king beds",
@@ -154,12 +154,12 @@ export const products: Product[] = [
     shortName: "Dining Room",
     tagline: "Caribbean spirit behind the table.",
     description:
-      "Bring the casa de madera facade into the dining room—modular pine panels, painted shutters, and white trim that glow under evening light. Same structure as the series; only the colorway changes.",
+      "Bring a Dominican house-front look into the dining room—pine panels, painted shutters, and white trim that glow under evening light. Same design as the series; only the accent color changes.",
     basePriceCents: 158000,
     features: [
       "Centered composition behind dining table",
       "Signature louvered shutters",
-      "Optional zócalo for grounded presence",
+      "Optional base band for grounded presence",
       "Works with existing wainscoting",
     ],
     specs: {
@@ -189,15 +189,15 @@ export const products: Product[] = [
     slug: "bathroom",
     name: "Bathroom Vanity Backboard",
     shortName: "Bathroom",
-    tagline: "A medicine-cabinet facade above the sink.",
+    tagline: "A shuttered accent behind the vanity.",
     description:
-      "The Fachada Series scaled for the bath—modular pine panels behind the vanity, with the signature shutter window reading as a medicine-cabinet optic. Accent color on shutters and zócalo; light wood and white trim throughout.",
+      "The Fachada Series scaled for the bath—pine panels behind the vanity, with the signature shutter window echoing a medicine cabinet. Accent color on shutters and base band; light wood and white trim throughout.",
     basePriceCents: 118000,
     features: [
       "Centered medicine-cabinet shutter motif",
       "Proportioned for vanity widths",
       "Moisture-minded finishes available",
-      "Full shutter, frame & zócalo language",
+      "Full shutter, frame & base-band look",
     ],
     specs: {
       materials: "Light natural pine planks, unfinished or lightly oiled",

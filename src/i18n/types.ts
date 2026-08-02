@@ -123,6 +123,9 @@ export type Dictionary = {
     eyebrow: string;
     title: string;
     lead: string;
+    formTabs: string;
+    tradeTab: string;
+    customTab: string;
     tradeTitle: string;
     tradeLead: string;
     tradeThanks: string;
