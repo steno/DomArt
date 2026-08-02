@@ -28,7 +28,8 @@ export function HeroBackground({ alt }: HeroBackgroundProps) {
       if (!cancelled) setMounted(true);
     };
 
-    if ("requestIdleCallback" in window) {
+    // Prefer idle scheduling when available; fall back for older browsers.
+    if (typeof window.requestIdleCallback === "function") {
       const id = window.requestIdleCallback(enable, { timeout: 1200 });
       return () => {
         cancelled = true;
