@@ -81,17 +81,17 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
           />
         </div>
         <div className="mt-3 flex items-center justify-between gap-3 lg:mt-4 lg:justify-center">
-          <div className="flex min-w-0 items-center gap-2 lg:justify-center">
-            <p className="text-sm text-neutral-500 lg:text-center">
+          <div className="flex min-w-0 items-start gap-2 lg:items-center lg:justify-center">
+            <p className="text-[0.95rem] leading-snug text-neutral-700 lg:text-center">
               {colorway.description}
             </p>
-            <span className="group relative inline-flex shrink-0">
+            <span className="group relative inline-flex shrink-0 pt-0.5 lg:pt-0">
               <button
                 type="button"
-                className="text-neutral-500 transition-colors hover:text-neutral-700 focus-visible:text-neutral-700 focus-visible:outline-none"
+                className="text-neutral-600 transition-colors hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none"
                 aria-label={t.moduleTip}
               >
-                <Info className="h-3.5 w-3.5" strokeWidth={1.5} />
+                <Info className="h-3.5 w-3.5" strokeWidth={1.75} />
               </button>
               <span
                 role="tooltip"
