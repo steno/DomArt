@@ -44,7 +44,10 @@ export function Header() {
         <button
           key={code}
           type="button"
-          onClick={() => setLocale(code)}
+          onClick={() => {
+            setLocale(code);
+            setOpen(false);
+          }}
           className={cn(
             "px-1.5 py-0.5 transition-colors",
             locale === code
