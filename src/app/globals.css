@@ -116,7 +116,7 @@ body {
 @media (max-width: 767px) {
   .img-ken-burns {
     transform-origin: center center;
-    animation: ken-burns-slide 10s ease-in-out infinite alternate;
+    animation: ken-burns-slide 5s ease-in-out infinite alternate;
     will-change: transform;
   }
 }
