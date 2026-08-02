@@ -139,7 +139,6 @@ export type Dictionary = {
     widthPlaceholder: string;
     requestCustom: string;
     footerLine: string;
-    orEmail: string;
   };
   review: {
     loading: string;
@@ -154,6 +153,7 @@ export type Dictionary = {
     lattice: string;
     zocalo: string;
     estimate: string;
+    includesInstallation: string;
     editDesign: string;
     nameOptional: string;
     notesOptional: string;
@@ -183,9 +183,11 @@ export type Dictionary = {
   };
   configurator: {
     craftsmanship: string;
+    includesInstallation: string;
     productType: string;
     accentColor: string;
     wallWidth: string;
+    vanityWidth: string;
     optionalFeatures: string;
     tvRecess: string;
     tvRecessHint: string;

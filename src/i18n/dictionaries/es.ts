@@ -197,7 +197,6 @@ export const es: Dictionary = {
     widthPlaceholder: 'ej. 108"',
     requestCustom: "Solicitar por WhatsApp",
     footerLine: "Pedidos y preguntas por WhatsApp:",
-    orEmail: "o escribe a",
   },
   review: {
     loading: "Cargando tu diseño…",
@@ -212,6 +211,7 @@ export const es: Dictionary = {
     lattice: "Celosía",
     zocalo: "Zócalo",
     estimate: "Estimado",
+    includesInstallation: "Incluye instalación",
     editDesign: "Editar diseño",
     nameOptional: "Tu nombre (opcional)",
     notesOptional: "Notas (opcional)",
@@ -243,9 +243,11 @@ export const es: Dictionary = {
   },
   configurator: {
     craftsmanship: "Oficio de {weeks}",
+    includesInstallation: "Incluye instalación",
     productType: "Tipo de producto",
     accentColor: "Color de acento",
     wallWidth: "Ancho de pared",
+    vanityWidth: "Ancho de tocador",
     optionalFeatures: "Opciones",
     tvRecess: "Nicho para TV",
     tvRecessHint: "Pantallas hasta 75″ · +$140",
@@ -398,7 +400,7 @@ export const es: Dictionary = {
           "Tablas de pino natural claro, sin barnizar o con aceite ligero",
         finish:
           "Persianas, marco y molduras pintados en tu color de acento + blanco",
-        modularWidths: '72", 96", 120", 144"',
+        modularWidths: '30", 36", 60", 72"',
         depth: 'Perfil total de 2.75"',
         diyOption:
           "Kit con lista de corte y guía de acabado, o paneles totalmente acabados",

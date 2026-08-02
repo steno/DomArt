@@ -51,7 +51,7 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
   const t = useDictionary().configurator;
   const products = useLocalizedProducts();
   const colorway = useLocalizedColorway(colorwayId);
-  const widths = useLocalizedWidths();
+  const widths = useLocalizedWidths(productId);
   const bands = useLocalizedBands();
   const weeks = useProductionWeeks();
 
@@ -62,6 +62,8 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
   const product = products.find((p) => p.id === productId)!;
   const price = calculatePrice(toConfig());
   const showTvOption = productId === "living-room";
+  const widthLegend =
+    productId === "bathroom" ? t.vanityWidth : t.wallWidth;
 
   const lifestyleSrc = lifestyleForProduct(productId, colorwayId);
 
@@ -127,7 +129,7 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
             {formatPrice(price, locale)}
           </p>
           <p className="mt-1 text-sm text-neutral-500">
-            {interpolate(t.craftsmanship, { weeks })}
+            {t.includesInstallation} · {interpolate(t.craftsmanship, { weeks })}
           </p>
         </div>
 
@@ -174,7 +176,7 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
 
         <fieldset>
           <legend className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-neutral-500">
-            {t.wallWidth}
+            {widthLegend}
           </legend>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
             {widths.map((w) => (

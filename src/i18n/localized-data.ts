@@ -11,7 +11,7 @@ import type {
 import {
   BASE_BANDS as baseBands,
   products as baseProducts,
-  WALL_WIDTHS as baseWidths,
+  getWidthsForProduct,
   getProduct as getBaseProduct,
 } from "@/lib/products";
 import { inspirationGallery as baseGallery } from "@/lib/images";
@@ -58,9 +58,9 @@ export function useLocalizedColorway(id: ColorwayId): Colorway {
   };
 }
 
-export function useLocalizedWidths() {
+export function useLocalizedWidths(productId: ProductType = "living-room") {
   const dict = useDictionary();
-  return baseWidths.map((w) => ({
+  return getWidthsForProduct(productId).map((w) => ({
     ...w,
     label: dict.widths[w.id as WallWidth],
   }));

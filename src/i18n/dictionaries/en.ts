@@ -196,7 +196,6 @@ export const en: Dictionary = {
     widthPlaceholder: 'e.g. 108"',
     requestCustom: "Request via WhatsApp",
     footerLine: "Orders & questions via WhatsApp:",
-    orEmail: "or email",
   },
   review: {
     loading: "Loading your design…",
@@ -211,6 +210,7 @@ export const en: Dictionary = {
     lattice: "Celosía lattice",
     zocalo: "Zócalo",
     estimate: "Estimate",
+    includesInstallation: "Includes installation",
     editDesign: "Edit design",
     nameOptional: "Your name (optional)",
     notesOptional: "Notes (optional)",
@@ -242,9 +242,11 @@ export const en: Dictionary = {
   },
   configurator: {
     craftsmanship: "{weeks} craftsmanship",
+    includesInstallation: "Includes installation",
     productType: "Product Type",
     accentColor: "Accent Color",
     wallWidth: "Wall Width",
+    vanityWidth: "Vanity Width",
     optionalFeatures: "Optional Features",
     tvRecess: "TV Recess",
     tvRecessHint: "Screens up to 75″ · +$140",
@@ -388,7 +390,7 @@ export const en: Dictionary = {
         materials: "Light natural pine planks, unfinished or lightly oiled",
         finish:
           "Painted shutters, frame & trim in your accent color + white",
-        modularWidths: '72", 96", 120", 144"',
+        modularWidths: '30", 36", 60", 72"',
         depth: '2.75" overall profile',
         diyOption: "Kit with cut list & finish guide, or fully finished panels",
       },

@@ -37,7 +37,7 @@ export default function ReviewPage() {
   const { locale } = useLocale();
   const products = useLocalizedProducts();
   const colorway = useLocalizedColorway(colorwayId);
-  const widths = useLocalizedWidths();
+  const widths = useLocalizedWidths(productId);
   const bands = useLocalizedBands();
   const weeks = useProductionWeeks();
 
@@ -153,8 +153,13 @@ export default function ReviewPage() {
             )}
             <div className="flex justify-between gap-6 border-t border-neutral-200 pt-4">
               <dt className="text-sm text-neutral-500">{t.estimate}</dt>
-              <dd className="font-display text-2xl text-neutral-900 tabular-nums">
-                {formatPrice(price, locale)}
+              <dd className="text-right">
+                <span className="block font-display text-2xl text-neutral-900 tabular-nums">
+                  {formatPrice(price, locale)}
+                </span>
+                <span className="mt-1 block text-xs text-neutral-500">
+                  {t.includesInstallation}
+                </span>
               </dd>
             </div>
           </dl>

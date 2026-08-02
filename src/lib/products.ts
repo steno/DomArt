@@ -34,17 +34,32 @@ export interface Product {
   };
 }
 
-export const WALL_WIDTHS: {
+export type WidthOption = {
   id: WallWidth;
   label: string;
   inches: string;
   priceModifierCents: number;
-}[] = [
+};
+
+/** Accent-wall spans for living, bedroom, and dining. */
+export const WALL_WIDTHS: WidthOption[] = [
   { id: "narrow", label: "Narrow", inches: '72"', priceModifierCents: 0 },
   { id: "standard", label: "Standard", inches: '96"', priceModifierCents: 12000 },
   { id: "wide", label: "Wide", inches: '120"', priceModifierCents: 24000 },
   { id: "extra-wide", label: "Extra Wide", inches: '144"', priceModifierCents: 36000 },
 ];
+
+/** Industry vanity widths for bathroom backboards. */
+export const VANITY_WIDTHS: WidthOption[] = [
+  { id: "narrow", label: "Narrow", inches: '30"', priceModifierCents: 0 },
+  { id: "standard", label: "Standard", inches: '36"', priceModifierCents: 4000 },
+  { id: "wide", label: "Wide", inches: '60"', priceModifierCents: 14000 },
+  { id: "extra-wide", label: "Extra Wide", inches: '72"', priceModifierCents: 20000 },
+];
+
+export function getWidthsForProduct(productId: ProductType): WidthOption[] {
+  return productId === "bathroom" ? VANITY_WIDTHS : WALL_WIDTHS;
+}
 
 export const BASE_BANDS: {
   id: BaseBandHeight;
@@ -187,7 +202,7 @@ export const products: Product[] = [
     specs: {
       materials: "Light natural pine planks, unfinished or lightly oiled",
       finish: "Painted shutters, frame & trim in your accent color + white",
-      modularWidths: '72", 96", 120", 144"',
+      modularWidths: '30", 36", 60", 72"',
       depth: '2.75" overall profile',
       diyOption: "Kit with cut list & finish guide, or fully finished panels",
     },
@@ -203,7 +218,7 @@ export const products: Product[] = [
       tvRecess: false,
       lattice: false,
       baseBand: "low",
-      width: "narrow",
+      width: "standard",
     },
   },
 ];
@@ -226,7 +241,8 @@ export function calculatePrice(config: Configuration): number {
   if (!product) return 0;
 
   let total = product.basePriceCents;
-  const width = WALL_WIDTHS.find((w) => w.id === config.width);
+  const widths = getWidthsForProduct(config.productId);
+  const width = widths.find((w) => w.id === config.width);
   const band = BASE_BANDS.find((b) => b.id === config.baseBand);
 
   total += width?.priceModifierCents ?? 0;

@@ -203,14 +203,6 @@ export default function ContactPage() {
         >
           {waDisplay}
         </a>
-        {" · "}
-        {t.orEmail}{" "}
-        <a
-          href="mailto:hello@domart.studio"
-          className="underline underline-offset-2 text-neutral-800"
-        >
-          hello@domart.studio
-        </a>
       </p>
     </div>
   );
