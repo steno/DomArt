@@ -16,7 +16,7 @@ export const STYLES_SHEET = "/images/colorways/styles-sheet.webp";
 /**
  * Same-scene lifestyle heroes per product — composition stays fixed;
  * only accent color changes across the six colorways.
- * Living + bedroom use the new data/raw swap set where available.
+ * Bathroom set regenerated from Grok (cabinet raised / camera back).
  */
 export const categoryScenes: Record<
   ProductType,
