@@ -123,6 +123,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => setOpen(false)}
               className="py-3 text-sm uppercase tracking-[0.14em] text-neutral-700"
             >
               {item.label}

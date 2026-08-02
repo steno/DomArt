@@ -103,13 +103,32 @@ body {
   animation: fade-up 0.7s ease-out 0.3s both;
 }
 
+/* Mobile: cover-crop lifestyle shots, then slowly pan across the wall */
+@keyframes ken-burns-slide {
+  from {
+    transform: scale(1.18) translateX(5.5%);
+  }
+  to {
+    transform: scale(1.18) translateX(-5.5%);
+  }
+}
+
+@media (max-width: 767px) {
+  .img-ken-burns {
+    transform-origin: center center;
+    animation: ken-burns-slide 22s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .animate-fade-up,
   .animate-fade-up-delay,
-  .animate-fade-up-delay-2 {
+  .animate-fade-up-delay-2,
+  .img-ken-burns {
     animation: none;
   }
 }
