@@ -1,0 +1,253 @@
+import type { ColorwayId } from "@/lib/colorways";
+import type { BaseBandHeight, ProductType, WallWidth } from "@/lib/products";
+
+export type Dictionary = {
+  meta: {
+    titleDefault: string;
+    description: string;
+  };
+  nav: {
+    shop: string;
+    inspiration: string;
+    howItsMade: string;
+    about: string;
+    contact: string;
+    openMenu: string;
+    closeMenu: string;
+    primary: string;
+    language: string;
+    en: string;
+    es: string;
+  };
+  footer: {
+    blurb: string;
+    explore: string;
+    company: string;
+    craftsmanship: string;
+    craftsmanshipBody: string;
+    shopSeries: string;
+    inspiration: string;
+    howItsMade: string;
+    about: string;
+    contactTrade: string;
+    customWidth: string;
+    rights: string;
+    ordersVia: string;
+  };
+  home: {
+    heroAlt: string;
+    series: string;
+    tagline: string;
+    exploreSeries: string;
+    configureYours: string;
+    ourStory: string;
+    storyHeadline: string;
+    storyBody: string;
+    readFullStory: string;
+    ctaHeadline: string;
+    ctaBody: string;
+    startConfiguring: string;
+  };
+  roomStrip: {
+    bedroom: string;
+    dining: string;
+    living: string;
+    bathroom: string;
+    prev: string;
+    next: string;
+    alt: string;
+  };
+  shop: {
+    series: string;
+    title: string;
+    body: string;
+    filters: string;
+    all: string;
+    livingRoom: string;
+    bedroom: string;
+    diningRoom: string;
+    bathroom: string;
+    from: string;
+  };
+  about: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    sectionTitle: string;
+    p1: string;
+    p2: string;
+    p3: string;
+    living: string;
+    bedroom: string;
+    dining: string;
+    craftedTitle: string;
+    craftedBody: string;
+    exploreSeries: string;
+    heroAlt: string;
+  };
+  howItsMade: {
+    process: string;
+    title: string;
+    lead: string;
+    steps: { title: string; body: string }[];
+    sixColorways: string;
+    colorwaysHeadline: string;
+    colorwaysBody: string;
+    colorwayAlt: string;
+    stylesSheetAlt: string;
+    materialsTitle: string;
+    baseMaterial: string;
+    baseMaterialBody: string;
+    signature: string;
+    signatureBody: string;
+    diyKit: string;
+    diyKitBody: string;
+    timeline: string;
+    timelineBody: string;
+    configureWall: string;
+  };
+  inspiration: {
+    gallery: string;
+    title: string;
+    lead: string;
+    findYourRoom: string;
+  };
+  gallery: {
+    id: string;
+    title: string;
+    caption: string;
+  }[];
+  contact: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    tradeTitle: string;
+    tradeLead: string;
+    tradeThanks: string;
+    name: string;
+    company: string;
+    email: string;
+    message: string;
+    sendInquiry: string;
+    customTitle: string;
+    customLead: string;
+    customThanks: string;
+    productType: string;
+    desiredWidth: string;
+    details: string;
+    detailsPlaceholder: string;
+    widthPlaceholder: string;
+    requestCustom: string;
+    footerLine: string;
+    orEmail: string;
+  };
+  review: {
+    loading: string;
+    eyebrow: string;
+    title: string;
+    lead: string;
+    product: string;
+    colorway: string;
+    width: string;
+    options: string;
+    tvRecess: string;
+    lattice: string;
+    zocalo: string;
+    estimate: string;
+    editDesign: string;
+    nameOptional: string;
+    notesOptional: string;
+    notesPlaceholder: string;
+    inquireWhatsApp: string;
+    openingWhatsApp: string;
+    opensNote: string;
+  };
+  confirmation: {
+    eyebrow: string;
+    thankYou: string;
+    body: string;
+    inquiry: string;
+    design: string;
+    estimate: string;
+    whatsappMissed: string;
+    questions: string;
+    contactUs: string;
+    reopenWhatsApp: string;
+    continueBrowsing: string;
+    loading: string;
+  };
+  notFound: {
+    title: string;
+    body: string;
+    returnHome: string;
+  };
+  configurator: {
+    craftsmanship: string;
+    productType: string;
+    accentColor: string;
+    wallWidth: string;
+    optionalFeatures: string;
+    tvRecess: string;
+    tvRecessHint: string;
+    lattice: string;
+    latticeHint: string;
+    zocalo: string;
+    reviewDesign: string;
+    configSaved: string;
+    moduleTip: string;
+    colorway: string;
+  };
+  productDetail: {
+    technicalSpecs: string;
+    materials: string;
+    finish: string;
+    modularWidths: string;
+    depth: string;
+    diyVsFinished: string;
+    production: string;
+    cutListTitle: string;
+    cutListLead: string;
+    relatedColorways: string;
+    customWidth: string;
+    requestInquiry: string;
+  };
+  widths: Record<WallWidth, string>;
+  bands: Record<BaseBandHeight, string>;
+  productionWeeks: string;
+  products: Record<
+    ProductType,
+    {
+      name: string;
+      shortName: string;
+      tagline: string;
+      description: string;
+      features: string[];
+      specs: {
+        materials: string;
+        finish: string;
+        modularWidths: string;
+        depth: string;
+        diyOption: string;
+      };
+      cutList: string[];
+    }
+  >;
+  colorways: Record<ColorwayId, { name: string; description: string }>;
+  whatsapp: {
+    greeting: string;
+    tradeGreeting: string;
+    customGreeting: string;
+    inquiry: string;
+    name: string;
+    company: string;
+    email: string;
+    message: string;
+    product: string;
+    desiredWidth: string;
+    details: string;
+    notes: string;
+    configuration: string;
+    estimate: string;
+    closing: string;
+  };
+};
