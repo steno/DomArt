@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 
 interface SiteImageProps {
   src: string;
@@ -15,6 +15,7 @@ interface SiteImageProps {
 /**
  * Static-export friendly image wrapper.
  * next/image with unoptimized still gives layout helpers.
+ * Prefixes public asset paths for GitHub Pages basePath.
  */
 export function SiteImage({
   src,
@@ -26,11 +27,13 @@ export function SiteImage({
   fill,
   aspect,
 }: SiteImageProps) {
+  const resolvedSrc = withBasePath(src);
+
   if (fill) {
     return (
       <div className={cn("relative overflow-hidden", className)}>
         <Image
-          src={src}
+          src={resolvedSrc}
           alt={alt}
           fill
           priority={priority}
@@ -45,7 +48,7 @@ export function SiteImage({
   return (
     <div className={cn("relative overflow-hidden", aspect, className)}>
       <Image
-        src={src}
+        src={resolvedSrc}
         alt={alt}
         width={1600}
         height={1200}

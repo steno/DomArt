@@ -4,7 +4,7 @@ import Image from "next/image";
 import type { ColorwayId } from "@/lib/colorways";
 import { swatchForProduct } from "@/lib/images";
 import type { ProductType } from "@/lib/products";
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 import { useDictionary } from "@/i18n/provider";
 import { useLocalizedColorways } from "@/i18n/localized-data";
 
@@ -75,7 +75,7 @@ export function ColorSwatches({
                 )}
               >
                 <Image
-                  src={swatchSrc}
+                  src={withBasePath(swatchSrc)}
                   alt=""
                   fill
                   unoptimized

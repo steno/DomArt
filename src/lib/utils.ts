@@ -19,6 +19,8 @@ export function formatPrice(
 
 export function withBasePath(path: string): string {
   const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  if (!path) return base || "/";
+  if (base && (path === base || path.startsWith(`${base}/`))) return path;
   if (!path.startsWith("/")) return `${base}/${path}`;
   return `${base}${path}`;
 }
