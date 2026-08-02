@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ColorSwatches } from "./ColorSwatches";
 import { SiteImage } from "@/components/ui/site-image";
+import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { useConfiguratorStore } from "@/store/configurator";
 import {
   calculatePrice,
@@ -16,7 +16,7 @@ import {
 } from "@/lib/products";
 import { lifestyleForProduct } from "@/lib/images";
 import { formatPrice, cn } from "@/lib/utils";
-import { ArrowRight, Info, X } from "lucide-react";
+import { ArrowRight, Info } from "lucide-react";
 import { interpolate, useDictionary, useLocale } from "@/i18n/provider";
 import {
   useLocalizedBands,
@@ -56,32 +56,10 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
   const bands = useLocalizedBands();
   const weeks = useProductionWeeks();
   const [imageFullscreen, setImageFullscreen] = useState(false);
-  const [portalReady, setPortalReady] = useState(false);
 
   useEffect(() => {
     if (initialProductId) setProduct(initialProductId);
   }, [initialProductId, setProduct]);
-
-  useEffect(() => {
-    setPortalReady(true);
-  }, []);
-
-  useEffect(() => {
-    if (!imageFullscreen) return;
-
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setImageFullscreen(false);
-    };
-
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKeyDown);
-
-    return () => {
-      document.body.style.overflow = prevOverflow;
-      window.removeEventListener("keydown", onKeyDown);
-    };
-  }, [imageFullscreen]);
 
   const product = products.find((p) => p.id === productId)!;
   const price = calculatePrice(toConfig());
@@ -308,35 +286,13 @@ export function Configurator({ initialProductId, className }: ConfiguratorProps)
         </div>
       </div>
 
-      {portalReady &&
-        imageFullscreen &&
-        createPortal(
-          <div
-            role="dialog"
-            aria-modal="true"
-            aria-label={lifestyleAlt}
-            className="fixed inset-0 z-[100] cursor-zoom-out bg-black"
-            onClick={() => setImageFullscreen(false)}
-          >
-            <button
-              type="button"
-              onClick={() => setImageFullscreen(false)}
-              aria-label={t.closeImage}
-              className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 sm:right-5 sm:top-5"
-            >
-              <X className="h-5 w-5" strokeWidth={1.75} />
-            </button>
-            <SiteImage
-              src={lifestyleSrc}
-              alt={lifestyleAlt}
-              fill
-              className="absolute inset-0"
-              sizes="100vw"
-              imgClassName="object-contain"
-            />
-          </div>,
-          document.body
-        )}
+      <ImageLightbox
+        src={lifestyleSrc}
+        alt={lifestyleAlt}
+        open={imageFullscreen}
+        onClose={() => setImageFullscreen(false)}
+        closeLabel={t.closeImage}
+      />
     </div>
   );
 }

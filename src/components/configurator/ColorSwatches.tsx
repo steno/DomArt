@@ -79,6 +79,9 @@ export function ColorSwatches({
                   alt=""
                   fill
                   unoptimized
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                   className="object-cover"
                   sizes="44px"
                 />

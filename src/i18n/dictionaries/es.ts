@@ -138,6 +138,8 @@ export const es: Dictionary = {
     title: "Inspiración",
     lead: "Fragmentos de la cultura de fachadas dominicanas—persianas, color, madera clara—llevados adentro como memoria. La Serie Fachada en salas, dormitorios, comedores y paneles de acento.",
     findYourRoom: "Encuentra tu espacio",
+    expandImage: "Ver imagen a pantalla completa",
+    closeImage: "Cerrar imagen a pantalla completa",
   },
   gallery: [
     {

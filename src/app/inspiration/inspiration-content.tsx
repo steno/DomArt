@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { SiteImage } from "@/components/ui/site-image";
+import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { Button } from "@/components/ui/button";
 import { useDictionary } from "@/i18n/provider";
 import {
@@ -13,6 +15,10 @@ export function InspirationContent() {
   const t = useDictionary().inspiration;
   const gallery = useLocalizedGallery();
   const products = useLocalizedProducts();
+  const [lightbox, setLightbox] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
 
   return (
     <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
@@ -32,16 +38,28 @@ export function InspirationContent() {
             key={`${item.title}-${i}`}
             className="mb-6 break-inside-avoid overflow-hidden bg-[#F3EEE6]"
           >
-            <Link href={item.href} className="block">
+            <button
+              type="button"
+              onClick={() => setLightbox({ src: item.src, alt: item.title })}
+              aria-label={t.expandImage}
+              className="block w-full cursor-zoom-in text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-neutral-900/30"
+            >
               <SiteImage
                 src={item.src}
                 alt={item.title}
                 aspect={i % 3 === 0 ? "aspect-[4/5]" : "aspect-[4/3]"}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-            </Link>
+            </button>
             <figcaption className="px-5 py-4">
-              <p className="font-display text-lg text-neutral-900">{item.title}</p>
+              <p className="font-display text-lg text-neutral-900">
+                <Link
+                  href={item.href}
+                  className="transition-colors hover:text-neutral-600"
+                >
+                  {item.title}
+                </Link>
+              </p>
               <p className="mt-1 text-sm text-neutral-500">{item.caption}</p>
             </figcaption>
           </figure>
@@ -60,6 +78,14 @@ export function InspirationContent() {
           ))}
         </div>
       </div>
+
+      <ImageLightbox
+        src={lightbox?.src ?? ""}
+        alt={lightbox?.alt ?? ""}
+        open={lightbox !== null}
+        onClose={() => setLightbox(null)}
+        closeLabel={t.closeImage}
+      />
     </div>
   );
 }

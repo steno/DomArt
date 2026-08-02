@@ -11,8 +11,6 @@ export const colorwayImages: Record<ColorwayId, string> = {
   navy: "/images/colorways/navy.webp",
 };
 
-export const STYLES_SHEET = "/images/colorways/styles-sheet.webp";
-
 /**
  * Same-scene lifestyle heroes per product — composition stays fixed;
  * only accent color changes across the six colorways.
@@ -102,13 +100,22 @@ export function swatchForProduct(
   return colorSwatchImages[productId][colorwayId];
 }
 
-/** Home hero background — start still for LCP, end still to rest on after play */
+/** Home hero background — end still is LCP; poster shows while deferred video boots */
 export const heroVideo = {
   poster: "/videos/hero-timelapse-poster.webp",
   endPoster: "/videos/hero-timelapse-end.webp",
+  /** Responsive LCP candidates (static export — no image optimizer) */
+  endPosterSrcSet: [
+    { src: "/videos/hero-timelapse-end-768.webp", width: 768 },
+    { src: "/videos/hero-timelapse-end-1280.webp", width: 1280 },
+    { src: "/videos/hero-timelapse-end.webp", width: 1920 },
+  ],
   mp4: "/videos/hero-timelapse.mp4",
   webm: "/videos/hero-timelapse.webm",
 } as const;
+
+/** Default Open Graph / Twitter share image (1200×630) */
+export const OG_IMAGE = "/og.jpg";
 
 /** All lifestyle photography (used on home, inspiration, PDP) */
 export const lifestyleImages = {

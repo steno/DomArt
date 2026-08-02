@@ -91,12 +91,14 @@ export function HeroBackground({ alt }: HeroBackgroundProps) {
 
   return (
     <div className="absolute inset-0">
+      {/* priority + srcSet → React hoists a responsive image preload into <head> */}
       <SiteImage
         src={heroVideo.endPoster}
         alt={alt}
         fill
         priority
         sizes="100vw"
+        srcSet={heroVideo.endPosterSrcSet}
         className="absolute inset-0"
         imgClassName="object-cover object-center"
       />
@@ -114,7 +116,8 @@ export function HeroBackground({ alt }: HeroBackgroundProps) {
             className="absolute inset-0 h-full w-full object-cover object-center"
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
+            poster={withBasePath(heroVideo.poster)}
             aria-hidden
             tabIndex={-1}
           >

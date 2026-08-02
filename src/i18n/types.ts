@@ -111,6 +111,8 @@ export type Dictionary = {
     title: string;
     lead: string;
     findYourRoom: string;
+    expandImage: string;
+    closeImage: string;
   };
   gallery: {
     id: string;

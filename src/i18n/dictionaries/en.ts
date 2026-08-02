@@ -138,6 +138,8 @@ export const en: Dictionary = {
     title: "Inspiration",
     lead: "Excerpts of Dominican facade culture—shutters, color, light wood—brought indoors as memory. The Fachada Series in living rooms, bedrooms, dining spaces, and pure feature panels.",
     findYourRoom: "Find your room",
+    expandImage: "View image fullscreen",
+    closeImage: "Close fullscreen image",
   },
   gallery: [
     {
