@@ -4,7 +4,7 @@ export const es: Dictionary = {
   meta: {
     titleDefault: "Domart — Paneles de fachada dominicanos",
     description:
-      "Paredes modulares para sala, dormitorio y comedor inspiradas en las casas de madera dominicanas. Alegría caribeña en forma moderna. Elaboradas en 3–4 semanas.",
+      "Paredes modulares para sala, dormitorio y comedor inspiradas en las casas de madera dominicanas. Alegría caribeña en forma moderna. Elaboradas en 1–2 semanas.",
   },
   nav: {
     shop: "Tienda",
@@ -21,7 +21,7 @@ export const es: Dictionary = {
   },
   footer: {
     blurb:
-      "Paneles de fachada dominicanos para interiores modernos. Madera de pino modular, color caribeño, elaborados en 3–4 semanas.",
+      "Paneles de fachada dominicanos para interiores modernos. Madera de pino modular, color caribeño, elaborados en 1–2 semanas.",
     explore: "Explorar",
     company: "Empresa",
     craftsmanship: "Oficio",
@@ -49,7 +49,7 @@ export const es: Dictionary = {
     readFullStory: "Leer la historia completa",
     ctaHeadline: "Configura tu pared de fachada",
     ctaBody:
-      "Elige tipo, colorway y ancho modular. La vista previa se actualiza al instante. Elaborada en 3–4 semanas. Consulta por WhatsApp.",
+      "Elige tipo, colorway y ancho modular. La vista previa se actualiza al instante. Elaborada en 1–2 semanas. Consulta por WhatsApp.",
     startConfiguring: "Empezar a configurar",
   },
   roomStrip: {
@@ -84,9 +84,9 @@ export const es: Dictionary = {
     living: "Sala",
     bedroom: "Dormitorio",
     dining: "Comedor",
-    craftedTitle: "Elaboradas en 3–4 semanas",
+    craftedTitle: "Elaboradas en 1–2 semanas",
     craftedBody:
-      "Cada pared se fabrica por encargo. Configúrala y empezamos cuando se confirme el pago.",
+      "Las piezas del chasis modular se mantienen en stock; tu color de acento se acaba a pedido. Configúrala y empezamos cuando se confirme el pago.",
     exploreSeries: "Explorar la serie",
     heroAlt: "Pared de fachada Domart Costa en sala",
   },
@@ -101,15 +101,15 @@ export const es: Dictionary = {
       },
       {
         title: "Lista de corte",
-        body: "Generamos una lista de corte precisa con madera estándar: tablas de fachada, ensambles de persianas, rieles de marco y bandas opcionales.",
+        body: "Tomamos blanks modulares en stock cuando podemos, y generamos una lista de corte precisa para el resto: tablas de fachada, ensambles de persianas, rieles de marco y bandas opcionales.",
       },
       {
         title: "Fresar y armar",
-        body: "Las tablas de pino quedan sin barnizar o con un aceite ligero para que se vea la veta. Persianas y marcos reciben un color de acento más molduras blancas.",
+        body: "Las tablas de pino quedan sin barnizar o con un aceite ligero para que se vea la veta. Persianas y marcos reciben un color de acento más molduras blancas—la pintura es el último paso, no un rebuild completo.",
       },
       {
         title: "Acabar y enviar",
-        body: "Los paneles se ajustan como sistema modular, se empacan para instalación y se envían dentro de nuestra ventana de oficio de 3–4 semanas.",
+        body: "Los paneles se ajustan como sistema modular, se empacan para instalación y se envían dentro de nuestra ventana de oficio de 1–2 semanas.",
       },
     ],
     sixColorways: "Seis colorways",
@@ -130,7 +130,7 @@ export const es: Dictionary = {
       "¿Prefieres acabar tú mismo? Solicita un kit con lista de corte y guía de acabado—mismas dimensiones modulares, tu mano en la capa final.",
     timeline: "Plazos",
     timelineBody:
-      "Paneles totalmente acabados: 3–4 semanas desde el pago hasta listo para envío. Anchos a medida disponibles por consulta.",
+      "Paneles totalmente acabados: normalmente 1–2 semanas desde el pago hasta listo para envío cuando hay blanks modulares en stock. Anchos a medida disponibles por consulta.",
     configureWall: "Configurar una pared",
   },
   inspiration: {
@@ -287,7 +287,7 @@ export const es: Dictionary = {
     low: 'Bajo (6")',
     standard: 'Estándar (10")',
   },
-  productionWeeks: "3–4 semanas",
+  productionWeeks: "1–2 semanas",
   products: {
     "living-room": {
       name: "Pared de acento para sala",

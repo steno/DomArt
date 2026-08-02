@@ -258,4 +258,4 @@ export function configLabel(config: Configuration): string {
   return product?.name ?? config.productId;
 }
 
-export const PRODUCTION_WEEKS = "3–4 weeks";
+export const PRODUCTION_WEEKS = "1–2 weeks";

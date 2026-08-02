@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s · Domart",
   },
   description:
-    "Modular living-room, bedroom, and dining-room accent walls inspired by Dominican casas de madera. Caribbean joy in modern form. Crafted in 3–4 weeks.",
+    "Modular living-room, bedroom, and dining-room accent walls inspired by Dominican casas de madera. Caribbean joy in modern form. Crafted in 1–2 weeks.",
   openGraph: {
     title: "Domart — Dominican Facade Back Boards",
     description:

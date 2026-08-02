@@ -14,40 +14,14 @@ export function HowItsMadeContent() {
 
   return (
     <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
-      <div className="max-w-2xl">
-        <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
-          {t.process}
-        </p>
-        <h1 className="font-display mt-3 text-4xl tracking-tight text-neutral-900 md:text-5xl">
-          {t.title}
-        </h1>
-        <p className="mt-5 text-neutral-600 leading-relaxed">{t.lead}</p>
-      </div>
-
-      <ol className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {t.steps.map((step, i) => (
-          <li key={stepNums[i]} className="border-t border-neutral-300 pt-6">
-            <p className="text-xs tracking-[0.2em] text-neutral-400">
-              {stepNums[i]}
-            </p>
-            <h2 className="font-display mt-3 text-xl text-neutral-900">
-              {step.title}
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              {step.body}
-            </p>
-          </li>
-        ))}
-      </ol>
-
-      <section className="mt-20 border-t border-neutral-200/70 pt-16">
+      <section>
         <div className="mb-12 max-w-xl">
           <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
             {t.sixColorways}
           </p>
-          <h2 className="font-display mt-3 text-3xl tracking-tight text-neutral-900 md:text-4xl">
+          <h1 className="font-display mt-3 text-4xl tracking-tight text-neutral-900 md:text-5xl">
             {t.colorwaysHeadline}
-          </h2>
+          </h1>
           <p className="mt-4 text-neutral-600">{t.colorwaysBody}</p>
         </div>
 
@@ -78,6 +52,34 @@ export function HowItsMadeContent() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="mt-20 border-t border-neutral-200/70 pt-16">
+        <div className="max-w-2xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+            {t.process}
+          </p>
+          <h2 className="font-display mt-3 text-3xl tracking-tight text-neutral-900 md:text-4xl">
+            {t.title}
+          </h2>
+          <p className="mt-5 text-neutral-600 leading-relaxed">{t.lead}</p>
+        </div>
+
+        <ol className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {t.steps.map((step, i) => (
+            <li key={stepNums[i]} className="border-t border-neutral-300 pt-6">
+              <p className="text-xs tracking-[0.2em] text-neutral-400">
+                {stepNums[i]}
+              </p>
+              <h3 className="font-display mt-3 text-xl text-neutral-900">
+                {step.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                {step.body}
+              </p>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section className="mt-20 border border-neutral-200 bg-[#F7F3EC] p-8 md:p-12">

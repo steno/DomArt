@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     titleDefault: "Domart — Dominican Facade Back Boards",
     description:
-      "Modular living-room, bedroom, and dining-room accent walls inspired by Dominican casas de madera. Caribbean joy in modern form. Crafted in 3–4 weeks.",
+      "Modular living-room, bedroom, and dining-room accent walls inspired by Dominican casas de madera. Caribbean joy in modern form. Crafted in 1–2 weeks.",
   },
   nav: {
     shop: "Shop",
@@ -21,7 +21,7 @@ export const en: Dictionary = {
   },
   footer: {
     blurb:
-      "Dominican facade back boards for modern interiors. Modular pine panels, joyful Caribbean color, crafted in 3–4 weeks.",
+      "Dominican facade back boards for modern interiors. Modular pine panels, joyful Caribbean color, crafted in 1–2 weeks.",
     explore: "Explore",
     company: "Company",
     craftsmanship: "Craftsmanship",
@@ -49,7 +49,7 @@ export const en: Dictionary = {
     readFullStory: "Read the full story",
     ctaHeadline: "Configure your facade wall",
     ctaBody:
-      "Choose type, colorway, and modular width. Live preview updates instantly. Crafted in 3–4 weeks. Inquire via WhatsApp.",
+      "Choose type, colorway, and modular width. Live preview updates instantly. Crafted in 1–2 weeks. Inquire via WhatsApp.",
     startConfiguring: "Start configuring",
   },
   roomStrip: {
@@ -84,9 +84,9 @@ export const en: Dictionary = {
     living: "Living",
     bedroom: "Bedroom",
     dining: "Dining",
-    craftedTitle: "Crafted in 3–4 weeks",
+    craftedTitle: "Crafted in 1–2 weeks",
     craftedBody:
-      "Every wall is built to order. Configure yours, and we begin after payment clears.",
+      "Modular chassis pieces are stocked; your accent color is finished to order. Configure yours, and we begin after payment clears.",
     exploreSeries: "Explore the Series",
     heroAlt: "Domart Costa living room facade wall",
   },
@@ -101,15 +101,15 @@ export const en: Dictionary = {
       },
       {
         title: "Cut list",
-        body: "We generate a precise cut list from standard lumber: clapboard faces, shutter assemblies, frame rails, and optional bands.",
+        body: "We pull stocked modular blanks where we can, then generate a precise cut list for the rest: clapboard faces, shutter assemblies, frame rails, and optional bands.",
       },
       {
         title: "Mill & assemble",
-        body: "Pine planks are left unfinished or lightly oiled so the grain shows. Shutters and frames receive one accent color plus white trim.",
+        body: "Pine planks are left unfinished or lightly oiled so the grain shows. Shutters and frames receive one accent color plus white trim—paint is the last step, not a full rebuild.",
       },
       {
         title: "Finish & ship",
-        body: "Panels are fitted as a modular system, packed for installation, and shipped within our 3–4 week craftsmanship window.",
+        body: "Panels are fitted as a modular system, packed for installation, and shipped within our 1–2 week craftsmanship window.",
       },
     ],
     sixColorways: "Six Colorways",
@@ -130,7 +130,7 @@ export const en: Dictionary = {
       "Prefer to finish yourself? Request a kit with cut list and finish guide—same modular dimensions, your hands on the final coat.",
     timeline: "Timeline",
     timelineBody:
-      "Fully finished panels: 3–4 weeks from payment to ship-ready. Custom widths available via inquiry.",
+      "Fully finished panels: typically 1–2 weeks from payment to ship-ready once modular blanks are in stock. Custom widths available via inquiry.",
     configureWall: "Configure a wall",
   },
   inspiration: {
@@ -284,7 +284,7 @@ export const en: Dictionary = {
     low: 'Low (6")',
     standard: 'Standard (10")',
   },
-  productionWeeks: "3–4 weeks",
+  productionWeeks: "1–2 weeks",
   products: {
     "living-room": {
       name: "Living Room Accent Wall",
